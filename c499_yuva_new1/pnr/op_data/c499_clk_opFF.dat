@@ -1,0 +1,8 @@
+################################################
+#                                              #
+# Silicon Perspective, A Cadence Company       #
+# FirstEncounter Design Restore script         #
+#    for design session: ../op_data/c499_clk_opFF.dat                     
+#                                              #
+################################################
+restoreDesign ../op_data/c499_clk_opFF.dat.dat c499_clk_opFF

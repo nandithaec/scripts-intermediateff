@@ -1,0 +1,717 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nets
+        -max_paths 10
+        -transition_time
+        -capacitance
+Design : c499_clk_opFF
+Version: E-2010.12-SP1
+Date   : Tue Oct 22 00:06:34 2013
+****************************************
+
+Operating Conditions: typical   Library: osu018_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_25/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U33/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n23 (net)                   4         0.05                0.00       1.94 f
+  c0/U32/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n26 (net)                   1         0.03                0.00       2.06 r
+  c0/U31/Y (XNOR2X1)                                 0.06      0.11       2.18 r
+  c0/N748 (net)                  1         0.01                0.00       2.18 r
+  c0/N748 (c499)                                               0.00       2.18 r
+  N748 (net)                               0.01                0.00       2.18 r
+  DFF_25/d (dff_39)                                            0.00       2.18 r
+  DFF_25/d (net)                           0.01                0.00       2.18 r
+  DFF_25/q_reg/D (DFFPOSX1)                          0.06      0.00       2.18 r
+  data arrival time                                                       2.18
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_25/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.18
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_26/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U33/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n23 (net)                   4         0.05                0.00       1.94 f
+  c0/U30/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n25 (net)                   1         0.03                0.00       2.06 r
+  c0/U29/Y (XNOR2X1)                                 0.06      0.11       2.18 r
+  c0/N749 (net)                  1         0.01                0.00       2.18 r
+  c0/N749 (c499)                                               0.00       2.18 r
+  N749 (net)                               0.01                0.00       2.18 r
+  DFF_26/d (dff_38)                                            0.00       2.18 r
+  DFF_26/d (net)                           0.01                0.00       2.18 r
+  DFF_26/q_reg/D (DFFPOSX1)                          0.06      0.00       2.18 r
+  data arrival time                                                       2.18
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_26/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.18
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_27/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U33/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n23 (net)                   4         0.05                0.00       1.94 f
+  c0/U28/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n24 (net)                   1         0.03                0.00       2.06 r
+  c0/U27/Y (XNOR2X1)                                 0.06      0.11       2.18 r
+  c0/N750 (net)                  1         0.01                0.00       2.18 r
+  c0/N750 (c499)                                               0.00       2.18 r
+  N750 (net)                               0.01                0.00       2.18 r
+  DFF_27/d (dff_37)                                            0.00       2.18 r
+  DFF_27/d (net)                           0.01                0.00       2.18 r
+  DFF_27/q_reg/D (DFFPOSX1)                          0.06      0.00       2.18 r
+  data arrival time                                                       2.18
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_27/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.18
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_28/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U33/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n23 (net)                   4         0.05                0.00       1.94 f
+  c0/U26/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n22 (net)                   1         0.03                0.00       2.06 r
+  c0/U25/Y (XNOR2X1)                                 0.06      0.11       2.18 r
+  c0/N751 (net)                  1         0.01                0.00       2.18 r
+  c0/N751 (c499)                                               0.00       2.18 r
+  N751 (net)                               0.01                0.00       2.18 r
+  DFF_28/d (dff_36)                                            0.00       2.18 r
+  DFF_28/d (net)                           0.01                0.00       2.18 r
+  DFF_28/q_reg/D (DFFPOSX1)                          0.06      0.00       2.18 r
+  data arrival time                                                       2.18
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_28/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.18
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_17/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_9/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_17/q_reg/CLK (DFFPOSX1)                       0.00      0.00       0.00 r
+  iDFF_17/q_reg/Q (DFFPOSX1)                         0.11      0.23       0.23 f
+  iDFF_17/q (net)                3         0.08                0.00       0.23 f
+  iDFF_17/q (dff_88)                                           0.00       0.23 f
+  IN_N65 (net)                             0.08                0.00       0.23 f
+  c0/N65 (c499)                                                0.00       0.23 f
+  c0/N65 (net)                             0.08                0.00       0.23 f
+  c0/U14/Y (INVX2)                                   0.07      0.07       0.30 r
+  c0/n14 (net)                   1         0.03                0.00       0.30 r
+  c0/U180/Y (XOR2X1)                                 0.11      0.13       0.43 r
+  c0/n149 (net)                  1         0.03                0.00       0.43 r
+  c0/U178/Y (XNOR2X1)                                0.20      0.19       0.63 r
+  c0/n113 (net)                  2         0.07                0.00       0.63 r
+  c0/U130/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n110 (net)                  1         0.03                0.00       0.78 r
+  c0/U129/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n106 (net)                  1         0.03                0.00       0.91 r
+  c0/U125/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n70 (net)                   5         0.08                0.00       1.09 f
+  c0/U9/Y (INVX2)                                    0.10      0.11       1.20 r
+  c0/n9 (net)                    4         0.06                0.00       1.20 r
+  c0/U116/Y (NOR2X1)                                 0.12      0.13       1.33 f
+  c0/n21 (net)                   3         0.05                0.00       1.33 f
+  c0/U114/Y (OAI21X1)                                0.08      0.09       1.42 r
+  c0/n97 (net)                   1         0.01                0.00       1.42 r
+  c0/U113/Y (OAI21X1)                                0.06      0.05       1.47 f
+  c0/n96 (net)                   1         0.01                0.00       1.47 f
+  c0/U112/Y (NAND2X1)                                0.08      0.06       1.53 r
+  c0/n95 (net)                   1         0.01                0.00       1.53 r
+  c0/U111/Y (OAI21X1)                                0.11      0.09       1.62 f
+  c0/n65 (net)                   3         0.05                0.00       1.62 f
+  c0/U76/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n64 (net)                   1         0.02                0.00       1.73 r
+  c0/U4/Y (INVX2)                                    0.05      0.05       1.78 f
+  c0/n4 (net)                    2         0.03                0.00       1.78 f
+  c0/U75/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n59 (net)                   4         0.05                0.00       1.94 f
+  c0/U74/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n63 (net)                   1         0.03                0.00       2.06 r
+  c0/U73/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N732 (net)                  1         0.01                0.00       2.17 r
+  c0/N732 (c499)                                               0.00       2.17 r
+  N732 (net)                               0.01                0.00       2.17 r
+  DFF_9/d (dff_55)                                             0.00       2.17 r
+  DFF_9/d (net)                            0.01                0.00       2.17 r
+  DFF_9/q_reg/D (DFFPOSX1)                           0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_9/q_reg/CLK (DFFPOSX1)                                   0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_17/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_10/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_17/q_reg/CLK (DFFPOSX1)                       0.00      0.00       0.00 r
+  iDFF_17/q_reg/Q (DFFPOSX1)                         0.11      0.23       0.23 f
+  iDFF_17/q (net)                3         0.08                0.00       0.23 f
+  iDFF_17/q (dff_88)                                           0.00       0.23 f
+  IN_N65 (net)                             0.08                0.00       0.23 f
+  c0/N65 (c499)                                                0.00       0.23 f
+  c0/N65 (net)                             0.08                0.00       0.23 f
+  c0/U14/Y (INVX2)                                   0.07      0.07       0.30 r
+  c0/n14 (net)                   1         0.03                0.00       0.30 r
+  c0/U180/Y (XOR2X1)                                 0.11      0.13       0.43 r
+  c0/n149 (net)                  1         0.03                0.00       0.43 r
+  c0/U178/Y (XNOR2X1)                                0.20      0.19       0.63 r
+  c0/n113 (net)                  2         0.07                0.00       0.63 r
+  c0/U130/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n110 (net)                  1         0.03                0.00       0.78 r
+  c0/U129/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n106 (net)                  1         0.03                0.00       0.91 r
+  c0/U125/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n70 (net)                   5         0.08                0.00       1.09 f
+  c0/U9/Y (INVX2)                                    0.10      0.11       1.20 r
+  c0/n9 (net)                    4         0.06                0.00       1.20 r
+  c0/U116/Y (NOR2X1)                                 0.12      0.13       1.33 f
+  c0/n21 (net)                   3         0.05                0.00       1.33 f
+  c0/U114/Y (OAI21X1)                                0.08      0.09       1.42 r
+  c0/n97 (net)                   1         0.01                0.00       1.42 r
+  c0/U113/Y (OAI21X1)                                0.06      0.05       1.47 f
+  c0/n96 (net)                   1         0.01                0.00       1.47 f
+  c0/U112/Y (NAND2X1)                                0.08      0.06       1.53 r
+  c0/n95 (net)                   1         0.01                0.00       1.53 r
+  c0/U111/Y (OAI21X1)                                0.11      0.09       1.62 f
+  c0/n65 (net)                   3         0.05                0.00       1.62 f
+  c0/U76/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n64 (net)                   1         0.02                0.00       1.73 r
+  c0/U4/Y (INVX2)                                    0.05      0.05       1.78 f
+  c0/n4 (net)                    2         0.03                0.00       1.78 f
+  c0/U75/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n59 (net)                   4         0.05                0.00       1.94 f
+  c0/U72/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n61 (net)                   1         0.03                0.00       2.06 r
+  c0/U71/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N733 (net)                  1         0.01                0.00       2.17 r
+  c0/N733 (c499)                                               0.00       2.17 r
+  N733 (net)                               0.01                0.00       2.17 r
+  DFF_10/d (dff_54)                                            0.00       2.17 r
+  DFF_10/d (net)                           0.01                0.00       2.17 r
+  DFF_10/q_reg/D (DFFPOSX1)                          0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_10/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_17/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_11/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_17/q_reg/CLK (DFFPOSX1)                       0.00      0.00       0.00 r
+  iDFF_17/q_reg/Q (DFFPOSX1)                         0.11      0.23       0.23 f
+  iDFF_17/q (net)                3         0.08                0.00       0.23 f
+  iDFF_17/q (dff_88)                                           0.00       0.23 f
+  IN_N65 (net)                             0.08                0.00       0.23 f
+  c0/N65 (c499)                                                0.00       0.23 f
+  c0/N65 (net)                             0.08                0.00       0.23 f
+  c0/U14/Y (INVX2)                                   0.07      0.07       0.30 r
+  c0/n14 (net)                   1         0.03                0.00       0.30 r
+  c0/U180/Y (XOR2X1)                                 0.11      0.13       0.43 r
+  c0/n149 (net)                  1         0.03                0.00       0.43 r
+  c0/U178/Y (XNOR2X1)                                0.20      0.19       0.63 r
+  c0/n113 (net)                  2         0.07                0.00       0.63 r
+  c0/U130/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n110 (net)                  1         0.03                0.00       0.78 r
+  c0/U129/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n106 (net)                  1         0.03                0.00       0.91 r
+  c0/U125/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n70 (net)                   5         0.08                0.00       1.09 f
+  c0/U9/Y (INVX2)                                    0.10      0.11       1.20 r
+  c0/n9 (net)                    4         0.06                0.00       1.20 r
+  c0/U116/Y (NOR2X1)                                 0.12      0.13       1.33 f
+  c0/n21 (net)                   3         0.05                0.00       1.33 f
+  c0/U114/Y (OAI21X1)                                0.08      0.09       1.42 r
+  c0/n97 (net)                   1         0.01                0.00       1.42 r
+  c0/U113/Y (OAI21X1)                                0.06      0.05       1.47 f
+  c0/n96 (net)                   1         0.01                0.00       1.47 f
+  c0/U112/Y (NAND2X1)                                0.08      0.06       1.53 r
+  c0/n95 (net)                   1         0.01                0.00       1.53 r
+  c0/U111/Y (OAI21X1)                                0.11      0.09       1.62 f
+  c0/n65 (net)                   3         0.05                0.00       1.62 f
+  c0/U76/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n64 (net)                   1         0.02                0.00       1.73 r
+  c0/U4/Y (INVX2)                                    0.05      0.05       1.78 f
+  c0/n4 (net)                    2         0.03                0.00       1.78 f
+  c0/U75/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n59 (net)                   4         0.05                0.00       1.94 f
+  c0/U70/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n60 (net)                   1         0.03                0.00       2.06 r
+  c0/U69/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N734 (net)                  1         0.01                0.00       2.17 r
+  c0/N734 (c499)                                               0.00       2.17 r
+  N734 (net)                               0.01                0.00       2.17 r
+  DFF_11/d (dff_53)                                            0.00       2.17 r
+  DFF_11/d (net)                           0.01                0.00       2.17 r
+  DFF_11/q_reg/D (DFFPOSX1)                          0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_11/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_17/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_12/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_17/q_reg/CLK (DFFPOSX1)                       0.00      0.00       0.00 r
+  iDFF_17/q_reg/Q (DFFPOSX1)                         0.11      0.23       0.23 f
+  iDFF_17/q (net)                3         0.08                0.00       0.23 f
+  iDFF_17/q (dff_88)                                           0.00       0.23 f
+  IN_N65 (net)                             0.08                0.00       0.23 f
+  c0/N65 (c499)                                                0.00       0.23 f
+  c0/N65 (net)                             0.08                0.00       0.23 f
+  c0/U14/Y (INVX2)                                   0.07      0.07       0.30 r
+  c0/n14 (net)                   1         0.03                0.00       0.30 r
+  c0/U180/Y (XOR2X1)                                 0.11      0.13       0.43 r
+  c0/n149 (net)                  1         0.03                0.00       0.43 r
+  c0/U178/Y (XNOR2X1)                                0.20      0.19       0.63 r
+  c0/n113 (net)                  2         0.07                0.00       0.63 r
+  c0/U130/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n110 (net)                  1         0.03                0.00       0.78 r
+  c0/U129/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n106 (net)                  1         0.03                0.00       0.91 r
+  c0/U125/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n70 (net)                   5         0.08                0.00       1.09 f
+  c0/U9/Y (INVX2)                                    0.10      0.11       1.20 r
+  c0/n9 (net)                    4         0.06                0.00       1.20 r
+  c0/U116/Y (NOR2X1)                                 0.12      0.13       1.33 f
+  c0/n21 (net)                   3         0.05                0.00       1.33 f
+  c0/U114/Y (OAI21X1)                                0.08      0.09       1.42 r
+  c0/n97 (net)                   1         0.01                0.00       1.42 r
+  c0/U113/Y (OAI21X1)                                0.06      0.05       1.47 f
+  c0/n96 (net)                   1         0.01                0.00       1.47 f
+  c0/U112/Y (NAND2X1)                                0.08      0.06       1.53 r
+  c0/n95 (net)                   1         0.01                0.00       1.53 r
+  c0/U111/Y (OAI21X1)                                0.11      0.09       1.62 f
+  c0/n65 (net)                   3         0.05                0.00       1.62 f
+  c0/U76/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n64 (net)                   1         0.02                0.00       1.73 r
+  c0/U4/Y (INVX2)                                    0.05      0.05       1.78 f
+  c0/n4 (net)                    2         0.03                0.00       1.78 f
+  c0/U75/Y (AND2X1)                                  0.11      0.15       1.94 f
+  c0/n59 (net)                   4         0.05                0.00       1.94 f
+  c0/U68/Y (NAND2X1)                                 0.11      0.12       2.06 r
+  c0/n58 (net)                   1         0.03                0.00       2.06 r
+  c0/U67/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N735 (net)                  1         0.01                0.00       2.17 r
+  c0/N735 (c499)                                               0.00       2.17 r
+  N735 (net)                               0.01                0.00       2.17 r
+  DFF_12/d (dff_52)                                            0.00       2.17 r
+  DFF_12/d (net)                           0.01                0.00       2.17 r
+  DFF_12/q_reg/D (DFFPOSX1)                          0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_12/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.64
+
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_29/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U24/Y (AND2X1)                                  0.11      0.14       1.93 f
+  c0/n17 (net)                   4         0.05                0.00       1.93 f
+  c0/U23/Y (NAND2X1)                                 0.11      0.12       2.05 r
+  c0/n20 (net)                   1         0.03                0.00       2.05 r
+  c0/U22/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N752 (net)                  1         0.01                0.00       2.17 r
+  c0/N752 (c499)                                               0.00       2.17 r
+  N752 (net)                               0.01                0.00       2.17 r
+  DFF_29/d (dff_35)                                            0.00       2.17 r
+  DFF_29/d (net)                           0.01                0.00       2.17 r
+  DFF_29/q_reg/D (DFFPOSX1)                          0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_29/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.65
+
+
+  Startpoint: iDFF_7/q_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DFF_31/q_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                        Fanout       Cap     Trans      Incr       Path
+  -------------------------------------------------------------------------------
+  clock clk (rise edge)                                        0.00       0.00
+  clock network delay (ideal)                                  0.00       0.00
+  iDFF_7/q_reg/CLK (DFFPOSX1)                        0.00      0.00       0.00 r
+  iDFF_7/q_reg/Q (DFFPOSX1)                          0.13      0.25       0.25 f
+  iDFF_7/q (net)                 3         0.10                0.00       0.25 f
+  iDFF_7/q (dff_98)                                            0.00       0.25 f
+  IN_N25 (net)                             0.10                0.00       0.25 f
+  c0/N25 (c499)                                                0.00       0.25 f
+  c0/N25 (net)                             0.10                0.00       0.25 f
+  c0/U157/Y (XOR2X1)                                 0.12      0.16       0.41 r
+  c0/n133 (net)                  1         0.03                0.00       0.41 r
+  c0/U156/Y (XNOR2X1)                                0.20      0.22       0.62 r
+  c0/n93 (net)                   2         0.07                0.00       0.62 r
+  c0/U109/Y (XOR2X1)                                 0.11      0.15       0.78 r
+  c0/n90 (net)                   1         0.03                0.00       0.78 r
+  c0/U108/Y (XOR2X1)                                 0.11      0.13       0.91 r
+  c0/n86 (net)                   1         0.03                0.00       0.91 r
+  c0/U104/Y (XOR2X1)                                 0.15      0.18       1.09 f
+  c0/n32 (net)                   5         0.08                0.00       1.09 f
+  c0/U11/Y (INVX2)                                   0.10      0.11       1.20 r
+  c0/n11 (net)                   4         0.06                0.00       1.20 r
+  c0/U96/Y (NOR2X1)                                  0.13      0.13       1.33 f
+  c0/n52 (net)                   3         0.05                0.00       1.33 f
+  c0/U56/Y (OAI21X1)                                 0.08      0.10       1.42 r
+  c0/n50 (net)                   1         0.01                0.00       1.42 r
+  c0/U55/Y (OAI21X1)                                 0.06      0.05       1.47 f
+  c0/n49 (net)                   1         0.01                0.00       1.47 f
+  c0/U54/Y (NAND2X1)                                 0.08      0.06       1.53 r
+  c0/n48 (net)                   1         0.01                0.00       1.53 r
+  c0/U53/Y (OAI21X1)                                 0.11      0.09       1.63 f
+  c0/n29 (net)                   3         0.05                0.00       1.63 f
+  c0/U34/Y (NAND3X1)                                 0.10      0.11       1.73 r
+  c0/n28 (net)                   1         0.02                0.00       1.73 r
+  c0/U2/Y (INVX2)                                    0.05      0.05       1.79 f
+  c0/n2 (net)                    2         0.03                0.00       1.79 f
+  c0/U24/Y (AND2X1)                                  0.11      0.14       1.93 f
+  c0/n17 (net)                   4         0.05                0.00       1.93 f
+  c0/U19/Y (NAND2X1)                                 0.11      0.12       2.05 r
+  c0/n18 (net)                   1         0.03                0.00       2.05 r
+  c0/U18/Y (XNOR2X1)                                 0.06      0.11       2.17 r
+  c0/N754 (net)                  1         0.01                0.00       2.17 r
+  c0/N754 (c499)                                               0.00       2.17 r
+  N754 (net)                               0.01                0.00       2.17 r
+  DFF_31/d (dff_33)                                            0.00       2.17 r
+  DFF_31/d (net)                           0.01                0.00       2.17 r
+  DFF_31/q_reg/D (DFFPOSX1)                          0.06      0.00       2.17 r
+  data arrival time                                                       2.17
+
+  clock clk (rise edge)                                       10.00      10.00
+  clock network delay (ideal)                                  0.00      10.00
+  DFF_31/q_reg/CLK (DFFPOSX1)                                  0.00      10.00 r
+  library setup time                                          -0.18       9.82
+  data required time                                                      9.82
+  -------------------------------------------------------------------------------
+  data required time                                                      9.82
+  data arrival time                                                      -2.17
+  -------------------------------------------------------------------------------
+  slack (MET)                                                             7.65
+
+
+1

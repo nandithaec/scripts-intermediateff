@@ -1,0 +1,30 @@
+Warning: Clock gating insertion with insert_clock_gating is deprecated and will be removed in a future release; instead use the compile -gate_clock command. (PWR-729)
+Information: Performing clock-gating on design c499_clk_opFF
+Information: Performing clock-gating on design dff
+
+
+Clock Gate Insertion Report
+===============================================================================
+| Gated |                   | Include |      | Enable | Setup | Width | Clock |
+| Group |  Flip-Flop Name   | Exclude | Bits | Cond.  | Cond. | Cond. | Gated |
+===============================================================================
+|       |                   |         |      |        |       |       |       |
+|       |  GATED REGISTERS  |         |      |        |       |       |       |
+|       |                   |         |      |        |       |       |       |
+|       | UNGATED REGISTERS |         |      |        |       |       |       |
+|       |       q_reg       |    -    |  1   |   no   |  ??   |  ??   |  no   |
+===============================================================================
+
+Summary:
+Flip-Flops                        Banks                   Bit-Width
+                              number  percentage      number  percentage
+Clock gated (total):             0            0          0            0
+Clock not gated because
+   Bank was excluded:            0            0          0            0
+   Bank width too small:         0            0          0            0
+   Enable condition not met:     1          100          1          100
+   Setup condition violated:     0            0          0            0
+Total:                           1          100          1          100
+No clock gating opportunities were found.
+Information: Performing clock-gating on design c499
+1

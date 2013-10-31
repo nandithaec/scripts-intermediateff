@@ -1,0 +1,433 @@
+	*******    Job started   at Tue Oct 22 00:15:13 IST 2013    **********
+	******Giltched version of the library file and technology file included in the spice file
+   dff_104 iDFF_1 (.q(IN_N1), 
+
+   dff_103 iDFF_2 (.q(IN_N5), 
+
+   dff_102 iDFF_3 (.q(IN_N9), 
+
+   dff_101 iDFF_4 (.q(IN_N13), 
+
+   dff_100 iDFF_5 (.q(IN_N17), 
+
+   dff_99 iDFF_6 (.q(IN_N21), 
+
+   dff_98 iDFF_7 (.q(IN_N25), 
+
+   dff_97 iDFF_8 (.q(IN_N29), 
+
+   dff_96 iDFF_9 (.q(IN_N33), 
+
+   dff_95 iDFF_10 (.q(IN_N37), 
+
+   dff_94 iDFF_11 (.q(IN_N41), 
+
+   dff_93 iDFF_12 (.q(IN_N45), 
+
+   dff_92 iDFF_13 (.q(IN_N49), 
+
+   dff_91 iDFF_14 (.q(IN_N53), 
+
+   dff_90 iDFF_15 (.q(IN_N57), 
+
+   dff_89 iDFF_16 (.q(IN_N61), 
+
+   dff_88 iDFF_17 (.q(IN_N65), 
+
+   dff_87 iDFF_18 (.q(IN_N69), 
+
+   dff_86 iDFF_19 (.q(IN_N73), 
+
+   dff_85 iDFF_20 (.q(IN_N77), 
+
+   dff_84 iDFF_21 (.q(IN_N81), 
+
+   dff_83 iDFF_22 (.q(IN_N85), 
+
+   dff_82 iDFF_23 (.q(IN_N89), 
+
+   dff_81 iDFF_24 (.q(IN_N93), 
+
+   dff_80 iDFF_25 (.q(IN_N97), 
+
+   dff_79 iDFF_26 (.q(IN_N101), 
+
+   dff_78 iDFF_27 (.q(IN_N105), 
+
+   dff_77 iDFF_28 (.q(IN_N109), 
+
+   dff_76 iDFF_29 (.q(IN_N113), 
+
+   dff_75 iDFF_30 (.q(IN_N117), 
+
+   dff_74 iDFF_31 (.q(IN_N121), 
+
+   dff_73 iDFF_32 (.q(IN_N125), 
+
+   dff_72 iDFF_33 (.q(IN_N129), 
+
+   dff_71 iDFF_34 (.q(IN_N130), 
+
+   dff_70 iDFF_35 (.q(IN_N131), 
+
+   dff_69 iDFF_36 (.q(IN_N132), 
+
+   dff_68 iDFF_37 (.q(IN_N133), 
+
+   dff_67 iDFF_38 (.q(IN_N134), 
+
+   dff_66 iDFF_39 (.q(IN_N135), 
+
+   dff_65 iDFF_40 (.q(IN_N136), 
+
+   dff_64 iDFF_41 (.q(IN_N137), 
+
+   dff_63 DFF_1 (.q(Q_N724), 
+
+   dff_62 DFF_2 (.q(Q_N725), 
+
+   dff_61 DFF_3 (.q(Q_N726), 
+
+   dff_60 DFF_4 (.q(Q_N727), 
+
+   dff_59 DFF_5 (.q(Q_N728), 
+
+   dff_58 DFF_6 (.q(Q_N729), 
+
+   dff_57 DFF_7 (.q(Q_N730), 
+
+   dff_56 DFF_8 (.q(Q_N731), 
+
+   dff_55 DFF_9 (.q(Q_N732), 
+
+   dff_54 DFF_10 (.q(Q_N733), 
+
+   dff_53 DFF_11 (.q(Q_N734), 
+
+   dff_52 DFF_12 (.q(Q_N735), 
+
+   dff_51 DFF_13 (.q(Q_N736), 
+
+   dff_50 DFF_14 (.q(Q_N737), 
+
+   dff_49 DFF_15 (.q(Q_N738), 
+
+   dff_48 DFF_16 (.q(Q_N739), 
+
+   dff_47 DFF_17 (.q(Q_N740), 
+
+   dff_46 DFF_18 (.q(Q_N741), 
+
+   dff_45 DFF_19 (.q(Q_N742), 
+
+   dff_44 DFF_20 (.q(Q_N743), 
+
+   dff_43 DFF_21 (.q(Q_N744), 
+
+   dff_42 DFF_22 (.q(Q_N745), 
+
+   dff_41 DFF_23 (.q(Q_N746), 
+
+   dff_40 DFF_24 (.q(Q_N747), 
+
+   dff_39 DFF_25 (.q(Q_N748), 
+
+   dff_38 DFF_26 (.q(Q_N749), 
+
+   dff_37 DFF_27 (.q(Q_N750), 
+
+   dff_36 DFF_28 (.q(Q_N751), 
+
+   dff_35 DFF_29 (.q(Q_N752), 
+
+   dff_34 DFF_30 (.q(Q_N753), 
+
+   dff_33 DFF_31 (.q(Q_N754), 
+
+   dff_32 DFF_32 (.q(Q_N755), 
+
+   dff_31 oDFF_1 (.q(Qout_N724), 
+
+   dff_30 oDFF_2 (.q(Qout_N725), 
+
+   dff_29 oDFF_3 (.q(Qout_N726), 
+
+   dff_28 oDFF_4 (.q(Qout_N727), 
+
+   dff_27 oDFF_5 (.q(Qout_N728), 
+
+   dff_26 oDFF_6 (.q(Qout_N729), 
+
+   dff_25 oDFF_7 (.q(Qout_N730), 
+
+   dff_24 oDFF_8 (.q(Qout_N731), 
+
+   dff_23 oDFF_9 (.q(Qout_N732), 
+
+   dff_22 oDFF_10 (.q(Qout_N733), 
+
+   dff_21 oDFF_11 (.q(Qout_N734), 
+
+   dff_20 oDFF_12 (.q(Qout_N735), 
+
+   dff_19 oDFF_13 (.q(Qout_N736), 
+
+   dff_18 oDFF_14 (.q(Qout_N737), 
+
+   dff_17 oDFF_15 (.q(Qout_N738), 
+
+   dff_16 oDFF_16 (.q(Qout_N739), 
+
+   dff_15 oDFF_17 (.q(Qout_N740), 
+
+   dff_14 oDFF_18 (.q(Qout_N741), 
+
+   dff_13 oDFF_19 (.q(Qout_N742), 
+
+   dff_12 oDFF_20 (.q(Qout_N743), 
+
+   dff_11 oDFF_21 (.q(Qout_N744), 
+
+   dff_10 oDFF_22 (.q(Qout_N745), 
+
+   dff_9 oDFF_23 (.q(Qout_N746), 
+
+   dff_8 oDFF_24 (.q(Qout_N747), 
+
+   dff_7 oDFF_25 (.q(Qout_N748), 
+
+   dff_6 oDFF_26 (.q(Qout_N749), 
+
+   dff_5 oDFF_27 (.q(Qout_N750), 
+
+   dff_4 oDFF_28 (.q(Qout_N751), 
+
+   dff_3 oDFF_29 (.q(Qout_N752), 
+
+   dff_2 oDFF_30 (.q(Qout_N753), 
+
+   dff_1 oDFF_31 (.q(Qout_N754), 
+
+   dff_0 oDFF_32 (.q(Qout_N755), 
+
+
+	********** Input output of the RTL file extracted
+	*************Fills removed from the spice file
+	*************Sub circuit instantiated in the spice file
+printing..
+length=104
+iDFF_1
+v(Xc499_clk_opFF.iDFF_1:Q)
+iDFF_2
+v(Xc499_clk_opFF.iDFF_2:Q)
+iDFF_3
+v(Xc499_clk_opFF.iDFF_3:Q)
+iDFF_4
+v(Xc499_clk_opFF.iDFF_4:Q)
+iDFF_5
+v(Xc499_clk_opFF.iDFF_5:Q)
+iDFF_6
+v(Xc499_clk_opFF.iDFF_6:Q)
+iDFF_7
+v(Xc499_clk_opFF.iDFF_7:Q)
+iDFF_8
+v(Xc499_clk_opFF.iDFF_8:Q)
+iDFF_9
+v(Xc499_clk_opFF.iDFF_9:Q)
+iDFF_10
+v(Xc499_clk_opFF.iDFF_10:Q)
+iDFF_11
+v(Xc499_clk_opFF.iDFF_11:Q)
+iDFF_12
+v(Xc499_clk_opFF.iDFF_12:Q)
+iDFF_13
+v(Xc499_clk_opFF.iDFF_13:Q)
+iDFF_14
+v(Xc499_clk_opFF.iDFF_14:Q)
+iDFF_15
+v(Xc499_clk_opFF.iDFF_15:Q)
+iDFF_16
+v(Xc499_clk_opFF.iDFF_16:Q)
+iDFF_17
+v(Xc499_clk_opFF.iDFF_17:Q)
+iDFF_18
+v(Xc499_clk_opFF.iDFF_18:Q)
+iDFF_19
+v(Xc499_clk_opFF.iDFF_19:Q)
+iDFF_20
+v(Xc499_clk_opFF.iDFF_20:Q)
+iDFF_21
+v(Xc499_clk_opFF.iDFF_21:Q)
+iDFF_22
+v(Xc499_clk_opFF.iDFF_22:Q)
+iDFF_23
+v(Xc499_clk_opFF.iDFF_23:Q)
+iDFF_24
+v(Xc499_clk_opFF.iDFF_24:Q)
+iDFF_25
+v(Xc499_clk_opFF.iDFF_25:Q)
+iDFF_26
+v(Xc499_clk_opFF.iDFF_26:Q)
+iDFF_27
+v(Xc499_clk_opFF.iDFF_27:Q)
+iDFF_28
+v(Xc499_clk_opFF.iDFF_28:Q)
+iDFF_29
+v(Xc499_clk_opFF.iDFF_29:Q)
+iDFF_30
+v(Xc499_clk_opFF.iDFF_30:Q)
+iDFF_31
+v(Xc499_clk_opFF.iDFF_31:Q)
+iDFF_32
+v(Xc499_clk_opFF.iDFF_32:Q)
+iDFF_33
+v(Xc499_clk_opFF.iDFF_33:Q)
+iDFF_34
+v(Xc499_clk_opFF.iDFF_34:Q)
+iDFF_35
+v(Xc499_clk_opFF.iDFF_35:Q)
+iDFF_36
+v(Xc499_clk_opFF.iDFF_36:Q)
+iDFF_37
+v(Xc499_clk_opFF.iDFF_37:Q)
+iDFF_38
+v(Xc499_clk_opFF.iDFF_38:Q)
+iDFF_39
+v(Xc499_clk_opFF.iDFF_39:Q)
+iDFF_40
+v(Xc499_clk_opFF.iDFF_40:Q)
+iDFF_41
+v(Xc499_clk_opFF.iDFF_41:Q)
+DFF_1
+v(Xc499_clk_opFF.DFF_1:Q)
+DFF_2
+v(Xc499_clk_opFF.DFF_2:Q)
+DFF_3
+v(Xc499_clk_opFF.DFF_3:Q)
+DFF_4
+v(Xc499_clk_opFF.DFF_4:Q)
+DFF_5
+v(Xc499_clk_opFF.DFF_5:Q)
+DFF_6
+v(Xc499_clk_opFF.DFF_6:Q)
+DFF_7
+v(Xc499_clk_opFF.DFF_7:Q)
+DFF_8
+v(Xc499_clk_opFF.DFF_8:Q)
+DFF_9
+v(Xc499_clk_opFF.DFF_9:Q)
+DFF_10
+v(Xc499_clk_opFF.DFF_10:Q)
+DFF_11
+v(Xc499_clk_opFF.DFF_11:Q)
+DFF_12
+v(Xc499_clk_opFF.DFF_12:Q)
+DFF_13
+v(Xc499_clk_opFF.DFF_13:Q)
+DFF_14
+v(Xc499_clk_opFF.DFF_14:Q)
+DFF_15
+v(Xc499_clk_opFF.DFF_15:Q)
+DFF_16
+v(Xc499_clk_opFF.DFF_16:Q)
+DFF_17
+v(Xc499_clk_opFF.DFF_17:Q)
+DFF_18
+v(Xc499_clk_opFF.DFF_18:Q)
+DFF_19
+v(Xc499_clk_opFF.DFF_19:Q)
+DFF_20
+v(Xc499_clk_opFF.DFF_20:Q)
+DFF_21
+v(Xc499_clk_opFF.DFF_21:Q)
+DFF_22
+v(Xc499_clk_opFF.DFF_22:Q)
+DFF_23
+v(Xc499_clk_opFF.DFF_23:Q)
+DFF_24
+v(Xc499_clk_opFF.DFF_24:Q)
+DFF_25
+v(Xc499_clk_opFF.DFF_25:Q)
+DFF_26
+v(Xc499_clk_opFF.DFF_26:Q)
+DFF_27
+v(Xc499_clk_opFF.DFF_27:Q)
+DFF_28
+v(Xc499_clk_opFF.DFF_28:Q)
+DFF_29
+v(Xc499_clk_opFF.DFF_29:Q)
+DFF_30
+v(Xc499_clk_opFF.DFF_30:Q)
+DFF_31
+v(Xc499_clk_opFF.DFF_31:Q)
+DFF_32
+v(Xc499_clk_opFF.DFF_32:Q)
+oDFF_1
+v(Xc499_clk_opFF.oDFF_1:Q)
+oDFF_2
+v(Xc499_clk_opFF.oDFF_2:Q)
+oDFF_3
+v(Xc499_clk_opFF.oDFF_3:Q)
+oDFF_4
+v(Xc499_clk_opFF.oDFF_4:Q)
+oDFF_5
+v(Xc499_clk_opFF.oDFF_5:Q)
+oDFF_6
+v(Xc499_clk_opFF.oDFF_6:Q)
+oDFF_7
+v(Xc499_clk_opFF.oDFF_7:Q)
+oDFF_8
+v(Xc499_clk_opFF.oDFF_8:Q)
+oDFF_9
+v(Xc499_clk_opFF.oDFF_9:Q)
+oDFF_10
+v(Xc499_clk_opFF.oDFF_10:Q)
+oDFF_11
+v(Xc499_clk_opFF.oDFF_11:Q)
+oDFF_12
+v(Xc499_clk_opFF.oDFF_12:Q)
+oDFF_13
+v(Xc499_clk_opFF.oDFF_13:Q)
+oDFF_14
+v(Xc499_clk_opFF.oDFF_14:Q)
+oDFF_15
+v(Xc499_clk_opFF.oDFF_15:Q)
+oDFF_16
+v(Xc499_clk_opFF.oDFF_16:Q)
+oDFF_17
+v(Xc499_clk_opFF.oDFF_17:Q)
+oDFF_18
+v(Xc499_clk_opFF.oDFF_18:Q)
+oDFF_19
+v(Xc499_clk_opFF.oDFF_19:Q)
+oDFF_20
+v(Xc499_clk_opFF.oDFF_20:Q)
+oDFF_21
+v(Xc499_clk_opFF.oDFF_21:Q)
+oDFF_22
+v(Xc499_clk_opFF.oDFF_22:Q)
+oDFF_23
+v(Xc499_clk_opFF.oDFF_23:Q)
+oDFF_24
+v(Xc499_clk_opFF.oDFF_24:Q)
+oDFF_25
+v(Xc499_clk_opFF.oDFF_25:Q)
+oDFF_26
+v(Xc499_clk_opFF.oDFF_26:Q)
+oDFF_27
+v(Xc499_clk_opFF.oDFF_27:Q)
+oDFF_28
+v(Xc499_clk_opFF.oDFF_28:Q)
+oDFF_29
+v(Xc499_clk_opFF.oDFF_29:Q)
+oDFF_30
+v(Xc499_clk_opFF.oDFF_30:Q)
+oDFF_31
+v(Xc499_clk_opFF.oDFF_31:Q)
+oDFF_32
+v(Xc499_clk_opFF.oDFF_32:Q)
+	********control statement written in the spice file
+
+ SPICE FILE written named reference_spice.sp
+***Done modifying the spice file to make it simulatable. File available in current directory reference_spice.sp
+

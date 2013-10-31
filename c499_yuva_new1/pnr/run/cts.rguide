@@ -1,0 +1,113 @@
+routeGuideNet clk
+wire 123.6 46.5 123.6 0 V 0.5
+endRouteGuideNet
+routeGuideNet clk__L1_N0
+wire 124.4 48.5 124.4 113.5 V 0.5
+wire 118 113.5 124.4 113.5 H 0.5
+wire 65.2 113.5 118 113.5 H 0.5
+wire 124.4 113.5 187.6 113.5 H 0.5
+endRouteGuideNet
+routeGuideNet clk__L2_N2
+#Trunk_Term begin
+#Trunk DFF_4/q_reg CLK 43.6 53.5
+#Trunk oDFF_2/q_reg CLK 50 93.5
+#Trunk iDFF_11/q_reg CLK 52.4 146.5
+#Trunk DFF_15/q_reg CLK 58 166.5
+#Trunk_Term end
+wire 66 111.5 58 111.5 H 0.5
+wire 66 111.5 66 93.5 V 0.5
+wire 66 111.5 75.6 111.5 H 0.5
+wire 66 111.5 66 166.5 V 0.5
+wire 66 166.5 66 186.5 V 0.5
+wire 66 166.5 58 166.5 H 0.5
+wire 66 93.5 58 93.5 H 0.5
+wire 66 93.5 66 73.5 V 0.5
+wire 58 111.5 52.4 111.5 H 0.5
+wire 52.4 111.5 52.4 113.5 V 0.5
+wire 52.4 113.5 52.4 126.5 V 0.5
+wire 52.4 126.5 52.4 133.5 V 0.5
+wire 66 73.5 66 66.5 V 0.5
+wire 58 93.5 50 93.5 H 0.5
+wire 52.4 133.5 52.4 146.5 V 0.5
+wire 66 66.5 66 53.5 V 0.5
+wire 66 53.5 70 53.5 H 0.5
+wire 66 53.5 43.6 53.5 H 0.5
+wire 66 186.5 70 186.5 H 0.5
+endRouteGuideNet
+routeGuideNet clk__L2_N1
+#Trunk_Term begin
+#Trunk iDFF_13/q_reg CLK 91.6 153.5
+#Trunk oDFF_32/q_reg CLK 133.2 166.5
+#Trunk DFF_31/q_reg CLK 149.2 186.5
+#Trunk DFF_13/q_reg CLK 106.8 186.5
+#Trunk iDFF_36/q_reg CLK 105.2 53.5
+#Trunk iDFF_23/q_reg CLK 149.2 53.5
+#Trunk_Term end
+wire 102 66.5 114.8 66.5 H 0.5
+wire 102 66.5 102 93.5 V 0.5
+wire 138 186.5 138.8 186.5 H 0.5
+wire 138 186.5 128.4 186.5 H 0.5
+wire 120.4 113.5 120.4 153.5 V 0.5
+wire 120.4 113.5 118.8 113.5 H 0.5
+wire 118.8 113.5 118.8 111.5 V 0.5
+wire 102 106.5 118.8 106.5 H 0.5
+wire 102 106.5 102 93.5 V 0.5
+wire 122.8 186.5 126 186.5 H 0.5
+wire 122.8 186.5 118 186.5 H 0.5
+wire 124.4 53.5 118 53.5 H 0.5
+wire 124.4 53.5 124.4 66.5 V 0.5
+wire 127.6 66.5 134 66.5 H 0.5
+wire 127.6 66.5 124.4 66.5 H 0.5
+wire 120.4 166.5 133.2 166.5 H 0.5
+wire 120.4 166.5 118 166.5 H 0.5
+wire 118 166.5 118 173.5 V 0.5
+wire 120.4 166.5 120.4 153.5 V 0.5
+wire 91.6 153.5 120.4 153.5 H 0.5
+wire 105.2 53.5 118 53.5 H 0.5
+wire 106.8 186.5 109.2 186.5 H 0.5
+wire 109.2 186.5 118 186.5 H 0.5
+wire 114.8 66.5 124.4 66.5 H 0.5
+wire 118 173.5 118 186.5 V 0.5
+wire 118.8 111.5 118.8 106.5 V 0.5
+wire 126 186.5 128.4 186.5 H 0.5
+wire 134 66.5 149.2 66.5 H 0.5
+wire 138.8 186.5 149.2 186.5 H 0.5
+wire 149.2 53.5 149.2 66.5 V 0.5
+endRouteGuideNet
+routeGuideNet clk__L2_N0
+#Trunk_Term begin
+#Trunk iDFF_39/q_reg CLK 157.2 93.5
+#Trunk iDFF_27/q_reg CLK 160.4 173.5
+#Trunk DFF_25/q_reg CLK 202.8 146.5
+#Trunk iDFF_28/q_reg CLK 167.6 186.5
+#Trunk DFF_17/q_reg CLK 193.2 93.5
+#Trunk iDFF_22/q_reg CLK 179.6 66.5
+#Trunk_Term end
+wire 188.4 111.5 200.4 111.5 H 0.5
+wire 188.4 111.5 188.4 93.5 V 0.5
+wire 188.4 111.5 188.4 113.5 V 0.5
+wire 188.4 113.5 188.4 126.5 V 0.5
+wire 188.4 93.5 187.6 93.5 H 0.5
+wire 188.4 93.5 193.2 93.5 H 0.5
+wire 188.4 93.5 188.4 73.5 V 0.5
+wire 188.4 126.5 188.4 133.5 V 0.5
+wire 188.4 126.5 193.2 126.5 H 0.5
+wire 193.2 126.5 202.8 126.5 H 0.5
+wire 188.4 133.5 188.4 166.5 V 0.5
+wire 188.4 73.5 188.4 66.5 V 0.5
+wire 193.2 93.5 204.4 93.5 H 0.5
+wire 187.6 93.5 157.2 93.5 H 0.5
+wire 202.8 126.5 202.8 133.5 V 0.5
+wire 188.4 166.5 188.4 173.5 V 0.5
+wire 202.8 133.5 202.8 146.5 V 0.5
+wire 188.4 66.5 179.6 66.5 H 0.5
+wire 188.4 66.5 188.4 53.5 V 0.5
+wire 179.6 66.5 167.6 66.5 H 0.5
+wire 167.6 66.5 167.6 53.5 V 0.5
+wire 188.4 173.5 188.4 186.5 V 0.5
+wire 188.4 173.5 181.2 173.5 H 0.5
+wire 181.2 173.5 160.4 173.5 H 0.5
+wire 188.4 186.5 183.6 186.5 H 0.5
+wire 183.6 186.5 171.6 186.5 H 0.5
+wire 171.6 186.5 167.6 186.5 H 0.5
+endRouteGuideNet

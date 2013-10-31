@@ -1,0 +1,209 @@
+rtl2gds -rtl=/home/users/nanditha/Documents/utility/c499_ecat_yuva_ip_FF/c499_clk_opFF.v -rtl_top=c499_clk_opFF -syn -frequency=100 -io_input_delay=1.1 -io_output_delay=0.7
+
+cd synthesis/run
+./run_dc.bash
+
+cd ../../
+
+rtl2gds -rtl=/home/users/nanditha/Documents/utility/c499_ecat_yuva_ip_FF/c499_clk_op_FF.v -rtl_top=c499_clk_opFF -pnr -frequency=100 -io_input_delay=1.1 -io_output_delay=0.7
+
+v2lvs -v pnr/op_data/c499_clk_opFF_final.v -o spice_v2lvs.sp -i -s0 gnd -s1 vdd -lsp 
+
+module c499_clk_opFF_syn ( clk, N1, N5, N9, N13, N17, N21, N25, N29, N33, N37, N41, 
+        N45, N49, N53, N57, N61, N65, N69, N73, N77, N81, N85, N89, N93, N97, 
+        N101, N105, N109, N113, N117, N121, N125, N129, N130, N131, N132, N133, 
+        N134, N135, N136, N137, Qout_N724, Qout_N725, Qout_N726, Qout_N727, 
+        Qout_N728, Qout_N729, Qout_N730, Qout_N731, Qout_N732, Qout_N733, 
+        Qout_N734, Qout_N735, Qout_N736, Qout_N737, Qout_N738, Qout_N739, 
+        Qout_N740, Qout_N741, Qout_N742, Qout_N743, Qout_N744, Qout_N745, 
+        Qout_N746, Qout_N747, Qout_N748, Qout_N749, Qout_N750, Qout_N751, 
+        Qout_N752, Qout_N753, Qout_N754, Qout_N755,FF_n1, n2, n3, n4, FF_n5, n6, n7, n8, FF_n9, n10, n11, n12, FF_n13, n14, n15, n16, FF_n17, n18, n19, n20, FF_n21, n22, n23, n24, FF_n25, n26, n27, n28, FF_n29, n30, n31, n32, FF_n33, n34, n35, n36, FF_n37, n38, n39, n40 );
+
+
+#/* Propagate constraints if using clock gating */
+set_dont_retime [get_cells "iDFF_*"]
+#remove_attribute [get_cells "iDFF_*"] boundary_optimization
+set_dont_retime [get_cells "odFF_*"]
+#remove_attribute [get_cells "odFF_*"] boundary_optimization
+compile -map_effort low
+#optimize_registers -sync_trans multiclass -async_trans multiclass
+set_optimize_registers true -design $toplevel
+optimize_registers
+#set_balance_registers true -design $toplevel
+#balance_registers
+#pipeline_design -flatten -stages 4 -clock_port_name clk 
+
+
+#set_max_area 0 
+#registers at input and output of design
+
+compile -map_effort medium
+check_design > ../reports/${toplevel}_check_design_initial.rpt 
+compile -incremental_mapping -map_effort high
+
+#/* Propagate constraints if using clock gating */
+set_dont_touch [get_cells "iDFF_*"]
+remove_attribute [get_cells "iDFF_*"] boundary_optimization
+set_dont_touch [get_cells "odFF_*"]
+remove_attribute [get_cells "odFF_*"] boundary_optimization
+
+#optimize_registers -sync_trans multiclass -async_trans multiclass
+#set_optimize_registers true -design $toplevel
+#optimize_registers
+set_balance_registers true -design $toplevel
+balance_registers
+
+check_design > ../reports/${toplevel}_check_design_initial.rpt 
+compile -incremental_mapping -map_effort medium
+
+
+
+#/* Propagate constraints if using clock gating */
+
+compile -map_effort low
+optimize_registers -sync_trans multiclass -async_trans multiclass
+
+compile -map_effort high
+
+check_design > ../reports/${toplevel}_check_design_initial.rpt 
+compile -incremental_mapping -map_effort medium
+
+
+dcrrt.pdf
+
+pg 24:
+The pipeline_design command is used to pipeline purely
+combinational designs. After you specify the number of stages, the
+command inserts the registers into the design and then optimizes
+the registers with respect to timing and area by accessing the
+functions of the optimize_registers command.
+
+
+pg 60 dont_touch 
+and pg 62 set_max_area 0
+Setting Timing Constraints pg 72
+
+pg 74
+optimize_registers -sync_trans multiclass \
+-async_trans multiclass
+
+pg 85:
+In addition to using the -check_design argument of the
+optimize_registers command, you can also use the
+-print_critical_loop option to ﬁnd the part of the design that
+is limiting delay improvement. This option is available for both the
+optimize_registers and the pipeline_design commands.
+
+pg 85
+Therefore you can recognize them by looking at a
+schematic for this netlist in a graphical display tool such as Design
+Vision.
+
+design_vision
+
+read_file -format ddc {/home/users/nanditha/Documents/utility/c499_ecat_yuva_ip_FF/synthesis/op_data/c499_clk_opFF.ddc}
+
+create design schematic
+
+pg 99
+A dont_touch attribute set on a given cell or its parent
+cells in the hierarchy overrides this attribute on that cell.
+
+
+
+pg 112
+optimize_registers command reference
+
+
+dcrmo.pdf - optimisation and timing 2007
+pg.39: The compile_ultra Command
+
+pg 58:
+To constrain a design for area only, use the following commands:
+dc_shell> remove_constraint -all
+dc_shell> set_max_area 0
+
+
+pg 59: path groups
+dc_shell> group_path -name group3 -from in3 -to FF1/D -weight 2.5
+
+pg 154: 
+Adaptive retiming moves registers and latches to improve worst negative slack (WNS). For
+datapath designs, you should still use either the optimize_registers command or the
+set_optimize_registers command followed by the compile_ultra command.
+You can use both adaptive retiming and pipelined logic retiming if you use the
+set_optimize_registers command on the pipelined portions of the design prior to
+running compile_ultra -retime, as shown in the following example:
+set_optimize_registers 
+
+
+pg 156 dont re_time
+You can use the set_dont_retime command to include or exclude designs or cells from
+being retimed. For example, the following command specifies that the design a1 should not
+be retimed:
+set_dont_retime [get_designs a1] true
+set_dont_retime [get_cells U1]
+compile_ultra -retime
+
+
+pg 166:
+set_dont_retime [get_cells {z1_reg z2_reg}] false
+
+
+pg 364: Considering Input and Output Delays
+ along with pipelining: good
+
+The system clock cycle is dictated by the first set of delays
+(5 ns plus 7 ns) and is 12 ns
+
+
+
+pg 366: 
+The balance_registers command first ungroups (removes) the hierarchy, then pipelines
+the flattened (nonhierarchical) design. This method of pipelining the design ensures that
+minimum cycle times can be found, because maximum flexibility is allowed in the network
+transformations (no functional boundaries get in the way). The original circuit structure is lost
+as a result of ungrouping the hierarchy.
+You can maintain the design hierarchy by placing dont_touch attributes on selected
+instances.
+
+
+tcoug: timing constraints optimization guide:
+pg 98: Estimated I/O Latency
+ set_input and output delays - explanation with figures
+
+
+pg 166: input and output delays examples
+set_input_delay
+delay_value
+[-reference_pin pin_port_name]
+[-clock clock_name]
+[-clock_fall]
+[-level_sensitive]
+[-network_latency_included]
+[-source_latency_included]
+[-rise] [-fall]
+[-max] [-min]
+[-add_delay]
+port_pin_list
+
+
+port_pin_list is a MUST.
+
+A common mistake is to use the following command, which sets delay on all the inputs,
+including the clock input:
+prompt> set_input_delay 2 -clock CLK [all_inputs]
+Instead, use this command:
+prompt> set_input_delay 2 -clock CLK \
+[remove_from_collection [all_inputs] [get_port CLK]]
+
+
+
+
+pg 168:
+To show output delays associated with ports, use report_port -output_delay.
+
+pg 267: GUI - design_vision
+
+
+

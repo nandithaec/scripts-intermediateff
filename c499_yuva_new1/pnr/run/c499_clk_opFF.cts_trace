@@ -1,0 +1,149 @@
+
+
+
+
+
+Tracing Clock clk
+
+****** Clock Tree (clk) Structure
+Nr. Subtrees                   : 1
+Nr. Sinks                      : 105
+Nr.          Rising  Sync Pins : 105
+Nr. Inverter Rising  Sync Pins : 0
+Nr.          Falling Sync Pins : 0
+Nr. Inverter Falling Sync Pins : 0
+
+** Leaf Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+DFFPOSX1 (CLK)                          105
+-----------------------------------------------
+
+
+
+
+** Gate Component Input Pins
+CELL (PORT)                            Nr.
+-----------------------------------------------
+-----------------------------------------------
+
+
+
+** Subtree Detail
+*DEPTH 0 Input_Pin: (EMPTY) Output_Pin: (clk) Cell: (EMPTY) Net: (clk) NO-INV
+          Nr. of Exclude Pins           : 0
+          Nr. of Total Sync Pins        : 105
+          Nr. of     Rising  Sync Pins  : 105
+          Nr. of Inv Rising  Sync Pins  : 0
+          Nr. of     Falling Sync Pins  : 0
+          Nr. of Inv Falling Sync Pins  : 0
+          Nr. of Gated Clocks           : 0
+***********************************************************
+
+****** Pre CTS Detail Structure for clock clk
+*DEPTH 0: clk
+ (Sync)iDFF_1/q_reg/CLK
+ (Sync)iDFF_2/q_reg/CLK
+ (Sync)iDFF_3/q_reg/CLK
+ (Sync)iDFF_4/q_reg/CLK
+ (Sync)iDFF_5/q_reg/CLK
+ (Sync)iDFF_6/q_reg/CLK
+ (Sync)iDFF_7/q_reg/CLK
+ (Sync)iDFF_8/q_reg/CLK
+ (Sync)iDFF_9/q_reg/CLK
+ (Sync)iDFF_10/q_reg/CLK
+ (Sync)iDFF_11/q_reg/CLK
+ (Sync)iDFF_12/q_reg/CLK
+ (Sync)iDFF_13/q_reg/CLK
+ (Sync)iDFF_14/q_reg/CLK
+ (Sync)iDFF_15/q_reg/CLK
+ (Sync)iDFF_16/q_reg/CLK
+ (Sync)iDFF_17/q_reg/CLK
+ (Sync)iDFF_18/q_reg/CLK
+ (Sync)iDFF_19/q_reg/CLK
+ (Sync)iDFF_20/q_reg/CLK
+ (Sync)iDFF_21/q_reg/CLK
+ (Sync)iDFF_22/q_reg/CLK
+ (Sync)iDFF_23/q_reg/CLK
+ (Sync)iDFF_24/q_reg/CLK
+ (Sync)iDFF_25/q_reg/CLK
+ (Sync)iDFF_26/q_reg/CLK
+ (Sync)iDFF_27/q_reg/CLK
+ (Sync)iDFF_28/q_reg/CLK
+ (Sync)iDFF_29/q_reg/CLK
+ (Sync)iDFF_30/q_reg/CLK
+ (Sync)iDFF_31/q_reg/CLK
+ (Sync)iDFF_32/q_reg/CLK
+ (Sync)iDFF_33/q_reg/CLK
+ (Sync)iDFF_34/q_reg/CLK
+ (Sync)iDFF_35/q_reg/CLK
+ (Sync)iDFF_36/q_reg/CLK
+ (Sync)iDFF_37/q_reg/CLK
+ (Sync)iDFF_38/q_reg/CLK
+ (Sync)iDFF_39/q_reg/CLK
+ (Sync)iDFF_40/q_reg/CLK
+ (Sync)iDFF_41/q_reg/CLK
+ (Sync)DFF_1/q_reg/CLK
+ (Sync)DFF_2/q_reg/CLK
+ (Sync)DFF_3/q_reg/CLK
+ (Sync)DFF_4/q_reg/CLK
+ (Sync)DFF_5/q_reg/CLK
+ (Sync)DFF_6/q_reg/CLK
+ (Sync)DFF_7/q_reg/CLK
+ (Sync)DFF_8/q_reg/CLK
+ (Sync)DFF_9/q_reg/CLK
+ (Sync)DFF_10/q_reg/CLK
+ (Sync)DFF_11/q_reg/CLK
+ (Sync)DFF_12/q_reg/CLK
+ (Sync)DFF_13/q_reg/CLK
+ (Sync)DFF_14/q_reg/CLK
+ (Sync)DFF_15/q_reg/CLK
+ (Sync)DFF_16/q_reg/CLK
+ (Sync)DFF_17/q_reg/CLK
+ (Sync)DFF_18/q_reg/CLK
+ (Sync)DFF_19/q_reg/CLK
+ (Sync)DFF_20/q_reg/CLK
+ (Sync)DFF_21/q_reg/CLK
+ (Sync)DFF_22/q_reg/CLK
+ (Sync)DFF_23/q_reg/CLK
+ (Sync)DFF_24/q_reg/CLK
+ (Sync)DFF_25/q_reg/CLK
+ (Sync)DFF_26/q_reg/CLK
+ (Sync)DFF_27/q_reg/CLK
+ (Sync)DFF_28/q_reg/CLK
+ (Sync)DFF_29/q_reg/CLK
+ (Sync)DFF_30/q_reg/CLK
+ (Sync)DFF_31/q_reg/CLK
+ (Sync)DFF_32/q_reg/CLK
+ (Sync)oDFF_1/q_reg/CLK
+ (Sync)oDFF_2/q_reg/CLK
+ (Sync)oDFF_3/q_reg/CLK
+ (Sync)oDFF_4/q_reg/CLK
+ (Sync)oDFF_5/q_reg/CLK
+ (Sync)oDFF_6/q_reg/CLK
+ (Sync)oDFF_7/q_reg/CLK
+ (Sync)oDFF_8/q_reg/CLK
+ (Sync)oDFF_9/q_reg/CLK
+ (Sync)oDFF_10/q_reg/CLK
+ (Sync)oDFF_11/q_reg/CLK
+ (Sync)oDFF_12/q_reg/CLK
+ (Sync)oDFF_13/q_reg/CLK
+ (Sync)oDFF_14/q_reg/CLK
+ (Sync)oDFF_15/q_reg/CLK
+ (Sync)oDFF_16/q_reg/CLK
+ (Sync)oDFF_17/q_reg/CLK
+ (Sync)oDFF_18/q_reg/CLK
+ (Sync)oDFF_19/q_reg/CLK
+ (Sync)oDFF_20/q_reg/CLK
+ (Sync)oDFF_21/q_reg/CLK
+ (Sync)oDFF_22/q_reg/CLK
+ (Sync)oDFF_23/q_reg/CLK
+ (Sync)oDFF_24/q_reg/CLK
+ (Sync)oDFF_25/q_reg/CLK
+ (Sync)oDFF_26/q_reg/CLK
+ (Sync)oDFF_27/q_reg/CLK
+ (Sync)oDFF_28/q_reg/CLK
+ (Sync)oDFF_29/q_reg/CLK
+ (Sync)oDFF_30/q_reg/CLK
+ (Sync)oDFF_31/q_reg/CLK
+ (Sync)oDFF_32/q_reg/CLK

@@ -1,0 +1,61 @@
+#######################################################
+#                                                     #
+#  Encounter Command Logging File                     #
+#  Created on Tue Oct 22 00:06:40 2013                #
+#                                                     #
+#######################################################
+
+#@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+#@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+#@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+#@(#)CDS: CPE v08.10-p009
+
+loadConfig ../conf/encounter.conf 0
+commitConfig
+floorPlan -r 1.0 0.6 40 40 40 40
+addRing -spacing_bottom 10 -width_left 10 -width_bottom 10 -width_top 10 -spacing_top 10 -layer_bottom metal5 -width_right 10 -around core -center 1 -layer_top metal5 -spacing_right 10 -spacing_left 10 -layer_right metal6 -layer_left metal6 -nets { gnd vdd }
+addStripe -set_to_set_distance 100 -spacing 5 -xleft_offset 50 -layer metal6 -width 5 -nets { gnd vdd }
+sroute -noBlockPins -noPadRings
+setPlaceMode -placeIoPins true
+placeDesign
+trialRoute
+timeDesign -preCTS -outDir ../reports/1.place_c499_clk_opFF
+setOptMode -verbose true -setupTargetSlack 0.0
+optDesign -preCTS
+timeDesign -preCTS -outDir ../reports/2.preCTS_c499_clk_opFF
+setCTSMode -fixLeafInst true -moveGate true
+createClockTreeSpec -file ../op_data/c499_clk_opFF.ctstch -bufFootprint buf -invFootprint inv
+specifyClockTree -clkfile ../op_data/c499_clk_opFF.ctstch
+ckSynthesis -forceReconvergent -rguide cts.rguide -report ../reports/c499_clk_opFF.ctsrpt -fix_added_buffers
+trialRoute -highEffort -guide cts.rguide
+timeDesign -postCTS -outDir ../reports/3.postCTS_c499_clk_opFF
+reportClockTree -localSkew -report ../reports/clock_localSkew.rpt
+reportClockTree -report ../reports/clockTree.rpt
+setOptMode -verbose true -setupTargetSlack 0.0
+optDesign -postCTS
+setExtractRCMode -detail -assumeMetFill -noReduce
+timeDesign -postCTS -outDir ../reports/4.postCTSOpt_c499_clk_opFF
+globalNetConnect vdd -type tiehi
+globalNetConnect vdd -type pgpin -pin vdd -override
+globalNetConnect gnd -type tielo
+globalNetConnect gnd -type pgpin -pin gnd -override
+globalDetailRoute
+optDesign -postRoute
+ecoRoute
+addFiller -cell FILL -prefix FILL
+globalNetConnect vdd -type tiehi
+globalNetConnect vdd -type pgpin -pin vdd -override
+globalNetConnect gnd -type tielo
+globalNetConnect gnd -type pgpin -pin gnd -override
+timeDesign -postRoute -outDir ../reports/5.postRouteOpt_c499_clk_opFF
+saveNetlist ../op_data/c499_clk_opFF_final.v
+defOut -floorplan -netlist -routing ../op_data/c499_clk_opFF_final.def.gz
+saveDesign ../op_data/c499_clk_opFF.dat
+streamOut ../op_data/c499_clk_opFF_final.gds2 -mapFile ../scripts/gds2_encounter.map -stripes 1 -units 1000 -mode ALL
+saveNetlist -excludeLeafCell final_excludeLeaf.v
+rcOut -spf ../op_data/c499_clk_opFF_final.dspf
+verifyGeometry -report ../reports/c499_clk_opFF_verifyGeometry.rpt
+verifyConnectivity -type all -report ../reports/c499_clk_opFF_verifyConnectivity.rpt
+summaryReport -nohtml -outfile ../reports/c499_clk_opFF_summary.rpt
+reportGateCount -outfile ../reports/c499_clk_opFF_gateCount.rpt

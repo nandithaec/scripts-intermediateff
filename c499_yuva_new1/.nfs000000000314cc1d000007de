@@ -1,0 +1,20 @@
+
+
+  Cadence Extraction QRC - Parasitic Extractor - Version 8.1.5-p014 Mon Aug
+16 19:43:08 PDT 2010
+---------------------------------------------------------------------------------------------------
+                            Copyright 2010 Cadence Design Systems, Inc.
+
+
+WARNING (EXTQRCXOPT-140) : At line 25 of file qrc_dspf.cmd :
+The "output_db -type dspf -compressed" option has been turned off because
+it is in conflict with the "output_setup -compressed" option.  The former
+will be obsolete in the future release.  Use the "output_setup -compressed"
+option to set compression setting. 
+
+INFO (EXTGRMP-102) : Starting at 2013-Oct-21 23:35:39 (2013-Oct-21 18:05:39 GMT).
+Running binary as: 
+ /cad/cadence/EXT81/tools.lnx86/extraction/bin/32bit/qrc -cmd
+./__qrc.qrc_dspf.cmd ./pnr/op_data/c499_clk_opFF_final.def.gz  
+
+INFO (EXTHPY-168) : Input stage started at Mon Oct 21 23:35:39 2013.

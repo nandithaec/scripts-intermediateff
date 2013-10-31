@@ -1,0 +1,127 @@
+ 
+****************************************
+Report : cell
+Design : c499_clk_opFF
+Version: E-2010.12-SP1
+Date   : Tue Oct 22 00:06:34 2013
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+DFF_1                     dff_63                          96.000000 h, n
+DFF_2                     dff_62                          96.000000 h, n
+DFF_3                     dff_61                          96.000000 h, n
+DFF_4                     dff_60                          96.000000 h, n
+DFF_5                     dff_59                          96.000000 h, n
+DFF_6                     dff_58                          96.000000 h, n
+DFF_7                     dff_57                          96.000000 h, n
+DFF_8                     dff_56                          96.000000 h, n
+DFF_9                     dff_55                          96.000000 h, n
+DFF_10                    dff_54                          96.000000 h, n
+DFF_11                    dff_53                          96.000000 h, n
+DFF_12                    dff_52                          96.000000 h, n
+DFF_13                    dff_51                          96.000000 h, n
+DFF_14                    dff_50                          96.000000 h, n
+DFF_15                    dff_49                          96.000000 h, n
+DFF_16                    dff_48                          96.000000 h, n
+DFF_17                    dff_47                          96.000000 h, n
+DFF_18                    dff_46                          96.000000 h, n
+DFF_19                    dff_45                          96.000000 h, n
+DFF_20                    dff_44                          96.000000 h, n
+DFF_21                    dff_43                          96.000000 h, n
+DFF_22                    dff_42                          96.000000 h, n
+DFF_23                    dff_41                          96.000000 h, n
+DFF_24                    dff_40                          96.000000 h, n
+DFF_25                    dff_39                          96.000000 h, n
+DFF_26                    dff_38                          96.000000 h, n
+DFF_27                    dff_37                          96.000000 h, n
+DFF_28                    dff_36                          96.000000 h, n
+DFF_29                    dff_35                          96.000000 h, n
+DFF_30                    dff_34                          96.000000 h, n
+DFF_31                    dff_33                          96.000000 h, n
+DFF_32                    dff_32                          96.000000 h, n
+c0                        c499                            7746.000000
+                                                                    h
+iDFF_1                    dff_104                         96.000000 h, n
+iDFF_2                    dff_103                         96.000000 h, n
+iDFF_3                    dff_102                         96.000000 h, n
+iDFF_4                    dff_101                         96.000000 h, n
+iDFF_5                    dff_100                         96.000000 h, n
+iDFF_6                    dff_99                          96.000000 h, n
+iDFF_7                    dff_98                          96.000000 h, n
+iDFF_8                    dff_97                          96.000000 h, n
+iDFF_9                    dff_96                          96.000000 h, n
+iDFF_10                   dff_95                          96.000000 h, n
+iDFF_11                   dff_94                          96.000000 h, n
+iDFF_12                   dff_93                          96.000000 h, n
+iDFF_13                   dff_92                          96.000000 h, n
+iDFF_14                   dff_91                          96.000000 h, n
+iDFF_15                   dff_90                          96.000000 h, n
+iDFF_16                   dff_89                          96.000000 h, n
+iDFF_17                   dff_88                          96.000000 h, n
+iDFF_18                   dff_87                          96.000000 h, n
+iDFF_19                   dff_86                          96.000000 h, n
+iDFF_20                   dff_85                          96.000000 h, n
+iDFF_21                   dff_84                          96.000000 h, n
+iDFF_22                   dff_83                          96.000000 h, n
+iDFF_23                   dff_82                          96.000000 h, n
+iDFF_24                   dff_81                          96.000000 h, n
+iDFF_25                   dff_80                          96.000000 h, n
+iDFF_26                   dff_79                          96.000000 h, n
+iDFF_27                   dff_78                          96.000000 h, n
+iDFF_28                   dff_77                          96.000000 h, n
+iDFF_29                   dff_76                          96.000000 h, n
+iDFF_30                   dff_75                          96.000000 h, n
+iDFF_31                   dff_74                          96.000000 h, n
+iDFF_32                   dff_73                          96.000000 h, n
+iDFF_33                   dff_72                          96.000000 h, n
+iDFF_34                   dff_71                          96.000000 h, n
+iDFF_35                   dff_70                          96.000000 h, n
+iDFF_36                   dff_69                          96.000000 h, n
+iDFF_37                   dff_68                          96.000000 h, n
+iDFF_38                   dff_67                          96.000000 h, n
+iDFF_39                   dff_66                          96.000000 h, n
+iDFF_40                   dff_65                          96.000000 h, n
+iDFF_41                   dff_64                          96.000000 h, n
+oDFF_1                    dff_31                          96.000000 h, n
+oDFF_2                    dff_30                          96.000000 h, n
+oDFF_3                    dff_29                          96.000000 h, n
+oDFF_4                    dff_28                          96.000000 h, n
+oDFF_5                    dff_27                          96.000000 h, n
+oDFF_6                    dff_26                          96.000000 h, n
+oDFF_7                    dff_25                          96.000000 h, n
+oDFF_8                    dff_24                          96.000000 h, n
+oDFF_9                    dff_23                          96.000000 h, n
+oDFF_10                   dff_22                          96.000000 h, n
+oDFF_11                   dff_21                          96.000000 h, n
+oDFF_12                   dff_20                          96.000000 h, n
+oDFF_13                   dff_19                          96.000000 h, n
+oDFF_14                   dff_18                          96.000000 h, n
+oDFF_15                   dff_17                          96.000000 h, n
+oDFF_16                   dff_16                          96.000000 h, n
+oDFF_17                   dff_15                          96.000000 h, n
+oDFF_18                   dff_14                          96.000000 h, n
+oDFF_19                   dff_13                          96.000000 h, n
+oDFF_20                   dff_12                          96.000000 h, n
+oDFF_21                   dff_11                          96.000000 h, n
+oDFF_22                   dff_10                          96.000000 h, n
+oDFF_23                   dff_9                           96.000000 h, n
+oDFF_24                   dff_8                           96.000000 h, n
+oDFF_25                   dff_7                           96.000000 h, n
+oDFF_26                   dff_6                           96.000000 h, n
+oDFF_27                   dff_5                           96.000000 h, n
+oDFF_28                   dff_4                           96.000000 h, n
+oDFF_29                   dff_3                           96.000000 h, n
+oDFF_30                   dff_2                           96.000000 h, n
+oDFF_31                   dff_1                           96.000000 h, n
+oDFF_32                   dff_0                           96.000000 h, n
+--------------------------------------------------------------------------------
+Total 106 cells                                           17826.000000
+1

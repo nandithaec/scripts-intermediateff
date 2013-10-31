@@ -1,0 +1,66 @@
+
+`timescale 1ns/100ps
+
+module dff (q, d,clk);
+
+input clk, d;
+output q;
+reg q;
+always @(posedge clk) 
+q = d;
+
+endmodule
+
+module decoder2_4 ( in1,in2,out1,out2,out3,out4 );
+
+
+input in1,in2;
+output out1,out2,out3,out4;
+wire a1,a2;
+
+not NOT1_81 (a1,in1);
+not NOT1_82 (a2,in2);
+
+and AND2_164 (out1, a1,a2);
+and AND2_165 (out2, a1,in2);
+and AND2_166 (out3,in1,a2);
+and AND2_167 (out4,in1,in2);
+
+endmodule
+
+
+module decoder2_4_clk (clk,in1,in2,final1,final2,final3,final4);
+
+input clk,in1,in2;
+
+output  final1,final2,final3,final4;
+
+wire a1,a2,
+	in_dff1,in_dff2,
+	Q_out1,Q_out2,Q_out3,Q_out4;
+
+decoder2_4 d0 (in_dff1,in_dff2,out1,out2,out3,out4);
+
+
+//Input FFs
+
+dff iDFF_1  (in_dff1, in1, clk);
+dff iDFF_2  (in_dff2, in2, clk);
+
+
+
+//extra set of output FFs
+dff DFF_1 (Q_out1,out1,clk);
+dff DFF_2 (Q_out2,out2,clk);
+dff DFF_3 (Q_out3,out3,clk);
+dff DFF_4 (Q_out4,out4,clk);
+
+
+//Output FFs
+dff oDFF_1 (final1,Q_out1,clk);
+dff oDFF_2 (final2,Q_out2,clk);
+dff oDFF_3 (final3,Q_out3,clk);
+dff oDFF_4 (final4,Q_out4,clk);
+
+endmodule
+

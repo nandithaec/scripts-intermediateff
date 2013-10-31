@@ -1,0 +1,1573 @@
+module c499_clk_opFF (
+	clk, 
+	N1, 
+	N5, 
+	N9, 
+	N13, 
+	N17, 
+	N21, 
+	N25, 
+	N29, 
+	N33, 
+	N37, 
+	N41, 
+	N45, 
+	N49, 
+	N53, 
+	N57, 
+	N61, 
+	N65, 
+	N69, 
+	N73, 
+	N77, 
+	N81, 
+	N85, 
+	N89, 
+	N93, 
+	N97, 
+	N101, 
+	N105, 
+	N109, 
+	N113, 
+	N117, 
+	N121, 
+	N125, 
+	N129, 
+	N130, 
+	N131, 
+	N132, 
+	N133, 
+	N134, 
+	N135, 
+	N136, 
+	N137, 
+	Qout_N724, 
+	Qout_N725, 
+	Qout_N726, 
+	Qout_N727, 
+	Qout_N728, 
+	Qout_N729, 
+	Qout_N730, 
+	Qout_N731, 
+	Qout_N732, 
+	Qout_N733, 
+	Qout_N734, 
+	Qout_N735, 
+	Qout_N736, 
+	Qout_N737, 
+	Qout_N738, 
+	Qout_N739, 
+	Qout_N740, 
+	Qout_N741, 
+	Qout_N742, 
+	Qout_N743, 
+	Qout_N744, 
+	Qout_N745, 
+	Qout_N746, 
+	Qout_N747, 
+	Qout_N748, 
+	Qout_N749, 
+	Qout_N750, 
+	Qout_N751, 
+	Qout_N752, 
+	Qout_N753, 
+	Qout_N754, 
+	Qout_N755);
+   input clk;
+   input N1;
+   input N5;
+   input N9;
+   input N13;
+   input N17;
+   input N21;
+   input N25;
+   input N29;
+   input N33;
+   input N37;
+   input N41;
+   input N45;
+   input N49;
+   input N53;
+   input N57;
+   input N61;
+   input N65;
+   input N69;
+   input N73;
+   input N77;
+   input N81;
+   input N85;
+   input N89;
+   input N93;
+   input N97;
+   input N101;
+   input N105;
+   input N109;
+   input N113;
+   input N117;
+   input N121;
+   input N125;
+   input N129;
+   input N130;
+   input N131;
+   input N132;
+   input N133;
+   input N134;
+   input N135;
+   input N136;
+   input N137;
+   output Qout_N724;
+   output Qout_N725;
+   output Qout_N726;
+   output Qout_N727;
+   output Qout_N728;
+   output Qout_N729;
+   output Qout_N730;
+   output Qout_N731;
+   output Qout_N732;
+   output Qout_N733;
+   output Qout_N734;
+   output Qout_N735;
+   output Qout_N736;
+   output Qout_N737;
+   output Qout_N738;
+   output Qout_N739;
+   output Qout_N740;
+   output Qout_N741;
+   output Qout_N742;
+   output Qout_N743;
+   output Qout_N744;
+   output Qout_N745;
+   output Qout_N746;
+   output Qout_N747;
+   output Qout_N748;
+   output Qout_N749;
+   output Qout_N750;
+   output Qout_N751;
+   output Qout_N752;
+   output Qout_N753;
+   output Qout_N754;
+   output Qout_N755;
+
+   // Internal wires
+   wire clk__L2_N2;
+   wire clk__L2_N1;
+   wire clk__L2_N0;
+   wire clk__L1_N0;
+   wire IN_N1;
+   wire IN_N5;
+   wire IN_N9;
+   wire IN_N13;
+   wire IN_N17;
+   wire IN_N21;
+   wire IN_N25;
+   wire IN_N29;
+   wire IN_N33;
+   wire IN_N37;
+   wire IN_N41;
+   wire IN_N45;
+   wire IN_N49;
+   wire IN_N53;
+   wire IN_N57;
+   wire IN_N61;
+   wire IN_N65;
+   wire IN_N69;
+   wire IN_N73;
+   wire IN_N77;
+   wire IN_N81;
+   wire IN_N85;
+   wire IN_N89;
+   wire IN_N93;
+   wire IN_N97;
+   wire IN_N101;
+   wire IN_N105;
+   wire IN_N109;
+   wire IN_N113;
+   wire IN_N117;
+   wire IN_N121;
+   wire IN_N125;
+   wire IN_N129;
+   wire IN_N130;
+   wire IN_N131;
+   wire IN_N132;
+   wire IN_N133;
+   wire IN_N134;
+   wire IN_N135;
+   wire IN_N136;
+   wire IN_N137;
+   wire Q_N724;
+   wire Q_N725;
+   wire Q_N726;
+   wire Q_N727;
+   wire Q_N728;
+   wire Q_N729;
+   wire Q_N730;
+   wire Q_N731;
+   wire Q_N732;
+   wire Q_N733;
+   wire Q_N734;
+   wire Q_N735;
+   wire Q_N736;
+   wire Q_N737;
+   wire Q_N738;
+   wire Q_N739;
+   wire Q_N740;
+   wire Q_N741;
+   wire Q_N742;
+   wire Q_N743;
+   wire Q_N744;
+   wire Q_N745;
+   wire Q_N746;
+   wire Q_N747;
+   wire Q_N748;
+   wire Q_N749;
+   wire Q_N750;
+   wire Q_N751;
+   wire Q_N752;
+   wire Q_N753;
+   wire Q_N754;
+   wire Q_N755;
+   wire c0_n150;
+   wire c0_n138;
+   wire c0_n112;
+   wire c0_n105;
+   wire c0_n90;
+   wire c0_n26;
+   wire c0_n24;
+   wire c0_n3;
+   wire n1;
+   wire n2;
+   wire n3;
+   wire n4;
+   wire n5;
+   wire n6;
+   wire n7;
+   wire n8;
+   wire n9;
+   wire n10;
+   wire n11;
+   wire n12;
+   wire n13;
+   wire n14;
+   wire n15;
+   wire n16;
+   wire n17;
+   wire n18;
+   wire n19;
+   wire n20;
+   wire n21;
+   wire n22;
+   wire n23;
+   wire n24;
+   wire n25;
+   wire n26;
+   wire n27;
+   wire n28;
+   wire n29;
+   wire n30;
+   wire n31;
+   wire n32;
+   wire n33;
+   wire n34;
+   wire n35;
+   wire n36;
+   wire n37;
+   wire n38;
+   wire n39;
+   wire n40;
+   wire n41;
+   wire n42;
+   wire n43;
+   wire n44;
+   wire n45;
+   wire n46;
+   wire n47;
+   wire n48;
+   wire n49;
+   wire n50;
+   wire n51;
+   wire n52;
+   wire n53;
+   wire n54;
+   wire n55;
+   wire n56;
+   wire n57;
+   wire n58;
+   wire n59;
+   wire n60;
+   wire n61;
+   wire n62;
+   wire n63;
+   wire n64;
+   wire n65;
+   wire n66;
+   wire n67;
+   wire n68;
+   wire n69;
+   wire n70;
+   wire n71;
+   wire n72;
+   wire n73;
+   wire n74;
+   wire n75;
+   wire n76;
+   wire n77;
+   wire n78;
+   wire n79;
+   wire n80;
+   wire n81;
+   wire n82;
+   wire n83;
+   wire n84;
+   wire n85;
+   wire n86;
+   wire n87;
+   wire n88;
+   wire n89;
+   wire n90;
+   wire n91;
+   wire n92;
+   wire n93;
+   wire n94;
+   wire n95;
+   wire n96;
+   wire n97;
+   wire n98;
+   wire n99;
+   wire n100;
+   wire n101;
+   wire n102;
+   wire n103;
+   wire n104;
+   wire n105;
+   wire n106;
+   wire n107;
+   wire n108;
+   wire n109;
+   wire n110;
+   wire n111;
+   wire n112;
+   wire n113;
+   wire n114;
+   wire n115;
+   wire n116;
+   wire n117;
+   wire n118;
+   wire n119;
+   wire n120;
+   wire n121;
+   wire n122;
+   wire n123;
+   wire n124;
+   wire n125;
+   wire n126;
+   wire n127;
+   wire n128;
+   wire n129;
+   wire n130;
+   wire n131;
+   wire n132;
+   wire n133;
+   wire n134;
+   wire n135;
+   wire n136;
+   wire n137;
+   wire n138;
+   wire n139;
+   wire n140;
+   wire n141;
+   wire n142;
+   wire n143;
+   wire n144;
+   wire n145;
+   wire n146;
+   wire n147;
+   wire n148;
+   wire n149;
+   wire n150;
+   wire n151;
+   wire n152;
+   wire n153;
+   wire n154;
+   wire n155;
+   wire n156;
+   wire n157;
+   wire n158;
+   wire n159;
+   wire n160;
+   wire n161;
+   wire n162;
+   wire n163;
+   wire n164;
+   wire n165;
+   wire n166;
+   wire n167;
+   wire n168;
+   wire n169;
+   wire n170;
+   wire n171;
+   wire n172;
+   wire n173;
+   wire n174;
+   wire n175;
+   wire n176;
+   wire n177;
+   wire n178;
+   wire n179;
+   wire n180;
+   wire n181;
+   wire n182;
+   wire n183;
+   wire n184;
+
+   INVX8 clk__L2_I2 (.Y(clk__L2_N2), 
+	.A(clk__L1_N0));
+   INVX8 clk__L2_I1 (.Y(clk__L2_N1), 
+	.A(clk__L1_N0));
+   INVX8 clk__L2_I0 (.Y(clk__L2_N0), 
+	.A(clk__L1_N0));
+   INVX8 clk__L1_I0 (.Y(clk__L1_N0), 
+	.A(clk));
+   DFFPOSX1 iDFF_1_q_reg (.Q(IN_N1), 
+	.D(N1), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_2_q_reg (.Q(IN_N5), 
+	.D(N5), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_3_q_reg (.Q(IN_N9), 
+	.D(N9), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_4_q_reg (.Q(IN_N13), 
+	.D(N13), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_5_q_reg (.Q(IN_N17), 
+	.D(N17), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_6_q_reg (.Q(IN_N21), 
+	.D(N21), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_7_q_reg (.Q(IN_N25), 
+	.D(N25), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_8_q_reg (.Q(IN_N29), 
+	.D(N29), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_9_q_reg (.Q(IN_N33), 
+	.D(N33), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_10_q_reg (.Q(IN_N37), 
+	.D(N37), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_11_q_reg (.Q(IN_N41), 
+	.D(N41), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_12_q_reg (.Q(IN_N45), 
+	.D(N45), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_13_q_reg (.Q(IN_N49), 
+	.D(N49), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_14_q_reg (.Q(IN_N53), 
+	.D(N53), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_15_q_reg (.Q(IN_N57), 
+	.D(N57), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 iDFF_16_q_reg (.Q(IN_N61), 
+	.D(N61), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_17_q_reg (.Q(IN_N65), 
+	.D(N65), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_18_q_reg (.Q(IN_N69), 
+	.D(N69), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_19_q_reg (.Q(IN_N73), 
+	.D(N73), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_20_q_reg (.Q(IN_N77), 
+	.D(N77), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_21_q_reg (.Q(IN_N81), 
+	.D(N81), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_22_q_reg (.Q(IN_N85), 
+	.D(N85), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_23_q_reg (.Q(IN_N89), 
+	.D(N89), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_24_q_reg (.Q(IN_N93), 
+	.D(N93), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_25_q_reg (.Q(IN_N97), 
+	.D(N97), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_26_q_reg (.Q(IN_N101), 
+	.D(N101), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_27_q_reg (.Q(IN_N105), 
+	.D(N105), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_28_q_reg (.Q(IN_N109), 
+	.D(N109), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_29_q_reg (.Q(IN_N113), 
+	.D(N113), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_30_q_reg (.Q(IN_N117), 
+	.D(N117), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_31_q_reg (.Q(IN_N121), 
+	.D(N121), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_32_q_reg (.Q(IN_N125), 
+	.D(N125), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_33_q_reg (.Q(IN_N129), 
+	.D(N129), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_34_q_reg (.Q(IN_N130), 
+	.D(N130), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_35_q_reg (.Q(IN_N131), 
+	.D(N131), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_36_q_reg (.Q(IN_N132), 
+	.D(N132), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 iDFF_37_q_reg (.Q(IN_N133), 
+	.D(N133), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_38_q_reg (.Q(IN_N134), 
+	.D(N134), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_39_q_reg (.Q(IN_N135), 
+	.D(N135), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_40_q_reg (.Q(IN_N136), 
+	.D(N136), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 iDFF_41_q_reg (.Q(IN_N137), 
+	.D(N137), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_1_q_reg (.Q(Qout_N724), 
+	.D(Q_N724), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_2_q_reg (.Q(Qout_N725), 
+	.D(Q_N725), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_3_q_reg (.Q(Qout_N726), 
+	.D(Q_N726), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_4_q_reg (.Q(Qout_N727), 
+	.D(Q_N727), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_5_q_reg (.Q(Qout_N728), 
+	.D(Q_N728), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_6_q_reg (.Q(Qout_N729), 
+	.D(Q_N729), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_7_q_reg (.Q(Qout_N730), 
+	.D(Q_N730), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_8_q_reg (.Q(Qout_N731), 
+	.D(Q_N731), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_9_q_reg (.Q(Qout_N732), 
+	.D(Q_N732), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_10_q_reg (.Q(Qout_N733), 
+	.D(Q_N733), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_11_q_reg (.Q(Qout_N734), 
+	.D(Q_N734), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_12_q_reg (.Q(Qout_N735), 
+	.D(Q_N735), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_13_q_reg (.Q(Qout_N736), 
+	.D(Q_N736), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_14_q_reg (.Q(Qout_N737), 
+	.D(Q_N737), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_15_q_reg (.Q(Qout_N738), 
+	.D(Q_N738), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_16_q_reg (.Q(Qout_N739), 
+	.D(Q_N739), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 odFF_17_q_reg (.Q(Qout_N740), 
+	.D(Q_N740), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_18_q_reg (.Q(Qout_N741), 
+	.D(Q_N741), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_19_q_reg (.Q(Qout_N742), 
+	.D(Q_N742), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_20_q_reg (.Q(Qout_N743), 
+	.D(Q_N743), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_21_q_reg (.Q(Qout_N744), 
+	.D(Q_N744), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_22_q_reg (.Q(Qout_N745), 
+	.D(Q_N745), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_23_q_reg (.Q(Qout_N746), 
+	.D(Q_N746), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_24_q_reg (.Q(Qout_N747), 
+	.D(Q_N747), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 odFF_25_q_reg (.Q(Qout_N748), 
+	.D(Q_N748), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_26_q_reg (.Q(Qout_N749), 
+	.D(Q_N749), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_27_q_reg (.Q(Qout_N750), 
+	.D(Q_N750), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_28_q_reg (.Q(Qout_N751), 
+	.D(Q_N751), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_29_q_reg (.Q(Qout_N752), 
+	.D(Q_N752), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_30_q_reg (.Q(Qout_N753), 
+	.D(Q_N753), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_31_q_reg (.Q(Qout_N754), 
+	.D(Q_N754), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 odFF_32_q_reg (.Q(Qout_N755), 
+	.D(Q_N755), 
+	.CLK(clk__L2_N0));
+   INVX2 U1 (.Y(n41), 
+	.A(n162));
+   INVX2 U2 (.Y(n42), 
+	.A(n36));
+   INVX2 U3 (.Y(n43), 
+	.A(n143));
+   INVX2 U4 (.Y(n44), 
+	.A(n35));
+   INVX2 U5 (.Y(n45), 
+	.A(n34));
+   INVX2 U6 (.Y(n46), 
+	.A(n33));
+   INVX2 U7 (.Y(n47), 
+	.A(n32));
+   INVX2 U8 (.Y(n48), 
+	.A(n31));
+   INVX2 U9 (.Y(n49), 
+	.A(n30));
+   INVX2 U10 (.Y(n50), 
+	.A(n29));
+   XOR2X1 U11 (.Y(c0_n90), 
+	.B(n52), 
+	.A(n51));
+   XOR2X1 U12 (.Y(n52), 
+	.B(n54), 
+	.A(n53));
+   XOR2X1 U13 (.Y(n53), 
+	.B(n56), 
+	.A(n55));
+   NAND2X1 U14 (.Y(n55), 
+	.B(IN_N131), 
+	.A(IN_N137));
+   XOR2X1 U15 (.Y(n51), 
+	.B(n58), 
+	.A(n57));
+   XOR2X1 U16 (.Y(n58), 
+	.B(IN_N57), 
+	.A(IN_N9));
+   XNOR2X1 U17 (.Y(n57), 
+	.B(IN_N41), 
+	.A(IN_N25));
+   XOR2X1 U18 (.Y(c0_n3), 
+	.B(n60), 
+	.A(n59));
+   XOR2X1 U19 (.Y(n60), 
+	.B(n62), 
+	.A(n61));
+   XOR2X1 U20 (.Y(n61), 
+	.B(n64), 
+	.A(n63));
+   NAND2X1 U21 (.Y(n63), 
+	.B(IN_N137), 
+	.A(IN_N132));
+   XOR2X1 U22 (.Y(n59), 
+	.B(n66), 
+	.A(n65));
+   XOR2X1 U23 (.Y(n66), 
+	.B(IN_N45), 
+	.A(IN_N61));
+   XNOR2X1 U24 (.Y(n65), 
+	.B(IN_N29), 
+	.A(IN_N13));
+   XOR2X1 U25 (.Y(c0_n26), 
+	.B(n68), 
+	.A(n67));
+   XOR2X1 U26 (.Y(n68), 
+	.B(n70), 
+	.A(n69));
+   XOR2X1 U27 (.Y(n69), 
+	.B(n72), 
+	.A(n71));
+   NAND2X1 U28 (.Y(n71), 
+	.B(IN_N137), 
+	.A(IN_N135));
+   XOR2X1 U29 (.Y(n67), 
+	.B(n74), 
+	.A(n73));
+   XOR2X1 U30 (.Y(n74), 
+	.B(IN_N73), 
+	.A(IN_N89));
+   XNOR2X1 U31 (.Y(n73), 
+	.B(IN_N121), 
+	.A(IN_N105));
+   XOR2X1 U32 (.Y(c0_n24), 
+	.B(n76), 
+	.A(n75));
+   XOR2X1 U33 (.Y(n76), 
+	.B(n78), 
+	.A(n77));
+   XOR2X1 U34 (.Y(n77), 
+	.B(n80), 
+	.A(n79));
+   NAND2X1 U35 (.Y(n79), 
+	.B(IN_N137), 
+	.A(IN_N136));
+   XOR2X1 U36 (.Y(n75), 
+	.B(n82), 
+	.A(n81));
+   XOR2X1 U37 (.Y(n82), 
+	.B(IN_N77), 
+	.A(IN_N93));
+   XNOR2X1 U38 (.Y(n81), 
+	.B(IN_N125), 
+	.A(IN_N109));
+   XOR2X1 U39 (.Y(c0_n150), 
+	.B(n84), 
+	.A(n83));
+   XOR2X1 U40 (.Y(n84), 
+	.B(n80), 
+	.A(n85));
+   XNOR2X1 U41 (.Y(n80), 
+	.B(n87), 
+	.A(n86));
+   XOR2X1 U42 (.Y(n87), 
+	.B(IN_N57), 
+	.A(IN_N61));
+   XNOR2X1 U43 (.Y(n86), 
+	.B(IN_N53), 
+	.A(IN_N49));
+   XOR2X1 U44 (.Y(n85), 
+	.B(n70), 
+	.A(n88));
+   XNOR2X1 U45 (.Y(n70), 
+	.B(n90), 
+	.A(n89));
+   XOR2X1 U46 (.Y(n90), 
+	.B(IN_N41), 
+	.A(IN_N45));
+   XNOR2X1 U47 (.Y(n89), 
+	.B(IN_N37), 
+	.A(IN_N33));
+   NAND2X1 U48 (.Y(n88), 
+	.B(IN_N137), 
+	.A(IN_N134));
+   XOR2X1 U49 (.Y(n83), 
+	.B(n92), 
+	.A(n91));
+   XOR2X1 U50 (.Y(n92), 
+	.B(IN_N69), 
+	.A(IN_N85));
+   XNOR2X1 U51 (.Y(n91), 
+	.B(IN_N117), 
+	.A(IN_N101));
+   XOR2X1 U52 (.Y(c0_n138), 
+	.B(n94), 
+	.A(n93));
+   XOR2X1 U53 (.Y(n94), 
+	.B(n78), 
+	.A(n95));
+   XNOR2X1 U54 (.Y(n78), 
+	.B(n97), 
+	.A(n96));
+   XOR2X1 U55 (.Y(n97), 
+	.B(IN_N25), 
+	.A(IN_N29));
+   XNOR2X1 U56 (.Y(n96), 
+	.B(IN_N21), 
+	.A(IN_N17));
+   XOR2X1 U57 (.Y(n95), 
+	.B(n72), 
+	.A(n98));
+   XNOR2X1 U58 (.Y(n72), 
+	.B(n100), 
+	.A(n99));
+   XOR2X1 U59 (.Y(n100), 
+	.B(IN_N5), 
+	.A(IN_N9));
+   XNOR2X1 U60 (.Y(n99), 
+	.B(IN_N13), 
+	.A(IN_N1));
+   NAND2X1 U61 (.Y(n98), 
+	.B(IN_N137), 
+	.A(IN_N133));
+   XOR2X1 U62 (.Y(n93), 
+	.B(n102), 
+	.A(n101));
+   XOR2X1 U63 (.Y(n102), 
+	.B(IN_N81), 
+	.A(IN_N97));
+   XNOR2X1 U64 (.Y(n101), 
+	.B(IN_N65), 
+	.A(IN_N113));
+   XOR2X1 U65 (.Y(c0_n112), 
+	.B(n104), 
+	.A(n103));
+   XOR2X1 U66 (.Y(n104), 
+	.B(n62), 
+	.A(n105));
+   XNOR2X1 U67 (.Y(n62), 
+	.B(n107), 
+	.A(n106));
+   XOR2X1 U68 (.Y(n107), 
+	.B(IN_N89), 
+	.A(IN_N93));
+   XNOR2X1 U69 (.Y(n106), 
+	.B(IN_N85), 
+	.A(IN_N81));
+   XOR2X1 U70 (.Y(n105), 
+	.B(n54), 
+	.A(n108));
+   XNOR2X1 U71 (.Y(n54), 
+	.B(n110), 
+	.A(n109));
+   XOR2X1 U72 (.Y(n110), 
+	.B(IN_N73), 
+	.A(IN_N77));
+   XNOR2X1 U73 (.Y(n109), 
+	.B(IN_N69), 
+	.A(IN_N65));
+   NAND2X1 U74 (.Y(n108), 
+	.B(IN_N137), 
+	.A(IN_N129));
+   XOR2X1 U75 (.Y(n103), 
+	.B(n112), 
+	.A(n111));
+   XOR2X1 U76 (.Y(n112), 
+	.B(IN_N33), 
+	.A(IN_N49));
+   XNOR2X1 U77 (.Y(n111), 
+	.B(IN_N17), 
+	.A(IN_N1));
+   XOR2X1 U78 (.Y(c0_n105), 
+	.B(n114), 
+	.A(n113));
+   XOR2X1 U79 (.Y(n114), 
+	.B(n64), 
+	.A(n115));
+   XNOR2X1 U80 (.Y(n64), 
+	.B(n117), 
+	.A(n116));
+   XOR2X1 U81 (.Y(n117), 
+	.B(IN_N121), 
+	.A(IN_N125));
+   XNOR2X1 U82 (.Y(n116), 
+	.B(IN_N117), 
+	.A(IN_N113));
+   XOR2X1 U83 (.Y(n115), 
+	.B(n56), 
+	.A(n118));
+   XNOR2X1 U84 (.Y(n56), 
+	.B(n120), 
+	.A(n119));
+   XOR2X1 U85 (.Y(n120), 
+	.B(IN_N109), 
+	.A(IN_N97));
+   XNOR2X1 U86 (.Y(n119), 
+	.B(IN_N105), 
+	.A(IN_N101));
+   NAND2X1 U87 (.Y(n118), 
+	.B(IN_N137), 
+	.A(IN_N130));
+   XOR2X1 U88 (.Y(n113), 
+	.B(n122), 
+	.A(n121));
+   XOR2X1 U89 (.Y(n122), 
+	.B(IN_N5), 
+	.A(IN_N53));
+   XNOR2X1 U90 (.Y(n121), 
+	.B(IN_N37), 
+	.A(IN_N21));
+   XOR2X1 U91 (.Y(Q_N755), 
+	.B(n123), 
+	.A(n37));
+   NOR2X1 U92 (.Y(n123), 
+	.B(n124), 
+	.A(n49));
+   XOR2X1 U93 (.Y(Q_N754), 
+	.B(n125), 
+	.A(n1));
+   NOR2X1 U94 (.Y(n125), 
+	.B(n124), 
+	.A(n48));
+   XOR2X1 U95 (.Y(Q_N753), 
+	.B(n126), 
+	.A(n38));
+   NOR2X1 U96 (.Y(n126), 
+	.B(n124), 
+	.A(n44));
+   XOR2X1 U97 (.Y(Q_N752), 
+	.B(n127), 
+	.A(n39));
+   NOR2X1 U98 (.Y(n127), 
+	.B(n124), 
+	.A(n45));
+   NAND3X1 U99 (.Y(n124), 
+	.C(n128), 
+	.B(n29), 
+	.A(n32));
+   NOR2X1 U100 (.Y(n128), 
+	.B(n129), 
+	.A(n43));
+   NAND2X1 U101 (.Y(n129), 
+	.B(n42), 
+	.A(n46));
+   XOR2X1 U102 (.Y(Q_N751), 
+	.B(n130), 
+	.A(n2));
+   NOR2X1 U103 (.Y(n130), 
+	.B(n131), 
+	.A(n49));
+   XOR2X1 U104 (.Y(Q_N750), 
+	.B(n132), 
+	.A(n3));
+   NOR2X1 U105 (.Y(n132), 
+	.B(n131), 
+	.A(n48));
+   XOR2X1 U106 (.Y(Q_N749), 
+	.B(n133), 
+	.A(n4));
+   NOR2X1 U107 (.Y(n133), 
+	.B(n131), 
+	.A(n44));
+   XOR2X1 U108 (.Y(Q_N748), 
+	.B(n134), 
+	.A(n5));
+   NOR2X1 U109 (.Y(n134), 
+	.B(n131), 
+	.A(n45));
+   NAND3X1 U110 (.Y(n131), 
+	.C(n135), 
+	.B(n46), 
+	.A(n50));
+   NOR2X1 U111 (.Y(n135), 
+	.B(n136), 
+	.A(n43));
+   XOR2X1 U112 (.Y(Q_N747), 
+	.B(n137), 
+	.A(n6));
+   NOR2X1 U113 (.Y(n137), 
+	.B(n138), 
+	.A(n49));
+   XOR2X1 U114 (.Y(Q_N746), 
+	.B(n139), 
+	.A(n7));
+   NOR2X1 U115 (.Y(n139), 
+	.B(n138), 
+	.A(n48));
+   XOR2X1 U116 (.Y(Q_N745), 
+	.B(n140), 
+	.A(n8));
+   NOR2X1 U117 (.Y(n140), 
+	.B(n138), 
+	.A(n44));
+   XOR2X1 U118 (.Y(Q_N744), 
+	.B(n141), 
+	.A(n9));
+   NOR2X1 U119 (.Y(n141), 
+	.B(n138), 
+	.A(n45));
+   NAND3X1 U120 (.Y(n138), 
+	.C(n142), 
+	.B(n42), 
+	.A(n47));
+   AND2X1 U121 (.Y(n142), 
+	.B(n144), 
+	.A(n143));
+   XOR2X1 U122 (.Y(Q_N743), 
+	.B(n145), 
+	.A(n10));
+   NOR2X1 U123 (.Y(n145), 
+	.B(n146), 
+	.A(n49));
+   XOR2X1 U124 (.Y(Q_N742), 
+	.B(n147), 
+	.A(n11));
+   NOR2X1 U125 (.Y(n147), 
+	.B(n146), 
+	.A(n48));
+   XOR2X1 U126 (.Y(Q_N741), 
+	.B(n148), 
+	.A(n12));
+   NOR2X1 U127 (.Y(n148), 
+	.B(n146), 
+	.A(n44));
+   XOR2X1 U128 (.Y(Q_N740), 
+	.B(n149), 
+	.A(n40));
+   NOR2X1 U129 (.Y(n149), 
+	.B(n146), 
+	.A(n45));
+   NAND3X1 U130 (.Y(n146), 
+	.C(n150), 
+	.B(n36), 
+	.A(n33));
+   NOR2X1 U131 (.Y(n150), 
+	.B(n151), 
+	.A(n43));
+   NAND2X1 U132 (.Y(n151), 
+	.B(n47), 
+	.A(n50));
+   OAI21X1 U133 (.Y(n143), 
+	.C(n154), 
+	.B(n153), 
+	.A(n152));
+   NAND3X1 U134 (.Y(n154), 
+	.C(n155), 
+	.B(n44), 
+	.A(n49));
+   NAND2X1 U135 (.Y(n153), 
+	.B(n45), 
+	.A(n48));
+   XOR2X1 U136 (.Y(Q_N739), 
+	.B(n156), 
+	.A(n13));
+   NOR2X1 U137 (.Y(n156), 
+	.B(n157), 
+	.A(n50));
+   XOR2X1 U138 (.Y(Q_N738), 
+	.B(n158), 
+	.A(n14));
+   NOR2X1 U139 (.Y(n158), 
+	.B(n157), 
+	.A(n42));
+   XOR2X1 U140 (.Y(Q_N737), 
+	.B(n159), 
+	.A(n15));
+   NOR2X1 U141 (.Y(n159), 
+	.B(n157), 
+	.A(n47));
+   XOR2X1 U142 (.Y(Q_N736), 
+	.B(n160), 
+	.A(n16));
+   NOR2X1 U143 (.Y(n160), 
+	.B(n157), 
+	.A(n46));
+   NAND3X1 U144 (.Y(n157), 
+	.C(n161), 
+	.B(n45), 
+	.A(n48));
+   AND2X1 U145 (.Y(n161), 
+	.B(n152), 
+	.A(n162));
+   NOR2X1 U146 (.Y(n152), 
+	.B(n49), 
+	.A(n44));
+   XOR2X1 U147 (.Y(Q_N735), 
+	.B(n163), 
+	.A(n17));
+   NOR2X1 U148 (.Y(n163), 
+	.B(n164), 
+	.A(n50));
+   XOR2X1 U149 (.Y(Q_N734), 
+	.B(n165), 
+	.A(n18));
+   NOR2X1 U150 (.Y(n165), 
+	.B(n164), 
+	.A(n42));
+   XOR2X1 U151 (.Y(Q_N733), 
+	.B(n166), 
+	.A(n19));
+   NOR2X1 U152 (.Y(n166), 
+	.B(n164), 
+	.A(n47));
+   XOR2X1 U153 (.Y(Q_N732), 
+	.B(n167), 
+	.A(n20));
+   NOR2X1 U154 (.Y(n167), 
+	.B(n164), 
+	.A(n46));
+   NAND3X1 U155 (.Y(n164), 
+	.C(n168), 
+	.B(n31), 
+	.A(n35));
+   NOR2X1 U156 (.Y(n168), 
+	.B(n169), 
+	.A(n41));
+   NAND2X1 U157 (.Y(n169), 
+	.B(n45), 
+	.A(n49));
+   XOR2X1 U158 (.Y(Q_N731), 
+	.B(n170), 
+	.A(n21));
+   NOR2X1 U159 (.Y(n170), 
+	.B(n171), 
+	.A(n50));
+   XOR2X1 U160 (.Y(Q_N730), 
+	.B(n172), 
+	.A(n22));
+   NOR2X1 U161 (.Y(n172), 
+	.B(n171), 
+	.A(n42));
+   XOR2X1 U162 (.Y(Q_N729), 
+	.B(n173), 
+	.A(n23));
+   NOR2X1 U163 (.Y(n173), 
+	.B(n171), 
+	.A(n47));
+   XOR2X1 U164 (.Y(Q_N728), 
+	.B(n174), 
+	.A(n24));
+   NOR2X1 U165 (.Y(n174), 
+	.B(n171), 
+	.A(n46));
+   NAND3X1 U166 (.Y(n171), 
+	.C(n175), 
+	.B(n34), 
+	.A(n30));
+   NOR2X1 U167 (.Y(n175), 
+	.B(n176), 
+	.A(n41));
+   NAND2X1 U168 (.Y(n176), 
+	.B(n44), 
+	.A(n48));
+   XOR2X1 U169 (.Y(Q_N727), 
+	.B(n177), 
+	.A(n25));
+   NOR2X1 U170 (.Y(n177), 
+	.B(n178), 
+	.A(n50));
+   XOR2X1 U171 (.Y(Q_N726), 
+	.B(n179), 
+	.A(n26));
+   NOR2X1 U172 (.Y(n179), 
+	.B(n178), 
+	.A(n42));
+   XOR2X1 U173 (.Y(Q_N725), 
+	.B(n180), 
+	.A(n27));
+   NOR2X1 U174 (.Y(n180), 
+	.B(n178), 
+	.A(n47));
+   XOR2X1 U175 (.Y(Q_N724), 
+	.B(n181), 
+	.A(n28));
+   NOR2X1 U176 (.Y(n181), 
+	.B(n178), 
+	.A(n46));
+   NAND3X1 U177 (.Y(n178), 
+	.C(n182), 
+	.B(n44), 
+	.A(n49));
+   NOR2X1 U178 (.Y(n182), 
+	.B(n155), 
+	.A(n41));
+   NAND2X1 U179 (.Y(n155), 
+	.B(n31), 
+	.A(n34));
+   OAI21X1 U180 (.Y(n162), 
+	.C(n184), 
+	.B(n183), 
+	.A(n144));
+   NAND3X1 U181 (.Y(n184), 
+	.C(n136), 
+	.B(n46), 
+	.A(n50));
+   NAND2X1 U182 (.Y(n136), 
+	.B(n32), 
+	.A(n36));
+   NAND2X1 U183 (.Y(n183), 
+	.B(n42), 
+	.A(n47));
+   NOR2X1 U184 (.Y(n144), 
+	.B(n50), 
+	.A(n46));
+   DFFPOSX1 clk_r_REG38_S2 (.Q(n1), 
+	.D(IN_N121), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG35_S2 (.Q(n2), 
+	.D(IN_N109), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG34_S2 (.Q(n3), 
+	.D(IN_N105), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG33_S2 (.Q(n4), 
+	.D(IN_N101), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG32_S2 (.Q(n5), 
+	.D(IN_N97), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG31_S2 (.Q(n6), 
+	.D(IN_N93), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG30_S2 (.Q(n7), 
+	.D(IN_N89), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG29_S2 (.Q(n8), 
+	.D(IN_N85), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG28_S2 (.Q(n9), 
+	.D(IN_N81), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG27_S2 (.Q(n10), 
+	.D(IN_N77), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG26_S2 (.Q(n11), 
+	.D(IN_N73), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG25_S2 (.Q(n12), 
+	.D(IN_N69), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG23_S2 (.Q(n13), 
+	.D(IN_N61), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG22_S2 (.Q(n14), 
+	.D(IN_N57), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG21_S2 (.Q(n15), 
+	.D(IN_N53), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG20_S2 (.Q(n16), 
+	.D(IN_N49), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG19_S2 (.Q(n17), 
+	.D(IN_N45), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG18_S2 (.Q(n18), 
+	.D(IN_N41), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG17_S2 (.Q(n19), 
+	.D(IN_N37), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG15_S2 (.Q(n20), 
+	.D(IN_N33), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG14_S2 (.Q(n21), 
+	.D(IN_N29), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG13_S2 (.Q(n22), 
+	.D(IN_N25), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG12_S2 (.Q(n23), 
+	.D(IN_N21), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG10_S2 (.Q(n24), 
+	.D(IN_N17), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG8_S2 (.Q(n25), 
+	.D(IN_N13), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG6_S2 (.Q(n26), 
+	.D(IN_N9), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG4_S2 (.Q(n27), 
+	.D(IN_N5), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG0_S2 (.Q(n28), 
+	.D(IN_N1), 
+	.CLK(clk__L2_N2));
+   DFFPOSX1 clk_r_REG9_S2 (.Q(n29), 
+	.D(c0_n3), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG11_S2 (.Q(n30), 
+	.D(c0_n24), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG2_S2 (.Q(n31), 
+	.D(c0_n26), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG5_S2 (.Q(n32), 
+	.D(c0_n105), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG3_S2 (.Q(n33), 
+	.D(c0_n112), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG1_S2 (.Q(n34), 
+	.D(c0_n138), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG16_S2 (.Q(n35), 
+	.D(c0_n150), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG7_S2 (.Q(n36), 
+	.D(c0_n90), 
+	.CLK(clk__L2_N1));
+   DFFPOSX1 clk_r_REG39_S2 (.Q(n37), 
+	.D(IN_N125), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG37_S2 (.Q(n38), 
+	.D(IN_N117), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG36_S2 (.Q(n39), 
+	.D(IN_N113), 
+	.CLK(clk__L2_N0));
+   DFFPOSX1 clk_r_REG24_S2 (.Q(n40), 
+	.D(IN_N65), 
+	.CLK(clk__L2_N0));
+//************************* CODE APPENDED TO ORIGINAL .v FILE STARTS FROM HERE *************************
+integer fileout;
+integer clk_count = 0;
+integer fileout1;
+integer clk_count1 = 0;
+initial
+begin
+fileout= $fopen("./c499_clk_opFF_reference_out/our_reference_out.txt","a+");
+fileout1= $fopen("./c499_clk_opFF_reference_out/tool_reference_out.txt","a+");
+end
+always @(negedge clk)
+begin
+
+$fwrite(fileout,"Qout_N724 = %b\n", Qout_N724);
+$fwrite(fileout1,"%b ", Qout_N724);
+$fwrite(fileout,"Qout_N725 = %b\n", Qout_N725);
+$fwrite(fileout1,"%b ", Qout_N725);
+$fwrite(fileout,"Qout_N726 = %b\n", Qout_N726);
+$fwrite(fileout1,"%b ", Qout_N726);
+$fwrite(fileout,"Qout_N727 = %b\n", Qout_N727);
+$fwrite(fileout1,"%b ", Qout_N727);
+$fwrite(fileout,"Qout_N728 = %b\n", Qout_N728);
+$fwrite(fileout1,"%b ", Qout_N728);
+$fwrite(fileout,"Qout_N729 = %b\n", Qout_N729);
+$fwrite(fileout1,"%b ", Qout_N729);
+$fwrite(fileout,"Qout_N730 = %b\n", Qout_N730);
+$fwrite(fileout1,"%b ", Qout_N730);
+$fwrite(fileout,"Qout_N731 = %b\n", Qout_N731);
+$fwrite(fileout1,"%b ", Qout_N731);
+$fwrite(fileout,"Qout_N732 = %b\n", Qout_N732);
+$fwrite(fileout1,"%b ", Qout_N732);
+$fwrite(fileout,"Qout_N733 = %b\n", Qout_N733);
+$fwrite(fileout1,"%b ", Qout_N733);
+$fwrite(fileout,"Qout_N734 = %b\n", Qout_N734);
+$fwrite(fileout1,"%b ", Qout_N734);
+$fwrite(fileout,"Qout_N735 = %b\n", Qout_N735);
+$fwrite(fileout1,"%b ", Qout_N735);
+$fwrite(fileout,"Qout_N736 = %b\n", Qout_N736);
+$fwrite(fileout1,"%b ", Qout_N736);
+$fwrite(fileout,"Qout_N737 = %b\n", Qout_N737);
+$fwrite(fileout1,"%b ", Qout_N737);
+$fwrite(fileout,"Qout_N738 = %b\n", Qout_N738);
+$fwrite(fileout1,"%b ", Qout_N738);
+$fwrite(fileout,"Qout_N739 = %b\n", Qout_N739);
+$fwrite(fileout1,"%b ", Qout_N739);
+$fwrite(fileout,"Qout_N740 = %b\n", Qout_N740);
+$fwrite(fileout1,"%b ", Qout_N740);
+$fwrite(fileout,"Qout_N741 = %b\n", Qout_N741);
+$fwrite(fileout1,"%b ", Qout_N741);
+$fwrite(fileout,"Qout_N742 = %b\n", Qout_N742);
+$fwrite(fileout1,"%b ", Qout_N742);
+$fwrite(fileout,"Qout_N743 = %b\n", Qout_N743);
+$fwrite(fileout1,"%b ", Qout_N743);
+$fwrite(fileout,"Qout_N744 = %b\n", Qout_N744);
+$fwrite(fileout1,"%b ", Qout_N744);
+$fwrite(fileout,"Qout_N745 = %b\n", Qout_N745);
+$fwrite(fileout1,"%b ", Qout_N745);
+$fwrite(fileout,"Qout_N746 = %b\n", Qout_N746);
+$fwrite(fileout1,"%b ", Qout_N746);
+$fwrite(fileout,"Qout_N747 = %b\n", Qout_N747);
+$fwrite(fileout1,"%b ", Qout_N747);
+$fwrite(fileout,"Qout_N748 = %b\n", Qout_N748);
+$fwrite(fileout1,"%b ", Qout_N748);
+$fwrite(fileout,"Qout_N749 = %b\n", Qout_N749);
+$fwrite(fileout1,"%b ", Qout_N749);
+$fwrite(fileout,"Qout_N750 = %b\n", Qout_N750);
+$fwrite(fileout1,"%b ", Qout_N750);
+$fwrite(fileout,"Qout_N751 = %b\n", Qout_N751);
+$fwrite(fileout1,"%b ", Qout_N751);
+$fwrite(fileout,"Qout_N752 = %b\n", Qout_N752);
+$fwrite(fileout1,"%b ", Qout_N752);
+$fwrite(fileout,"Qout_N753 = %b\n", Qout_N753);
+$fwrite(fileout1,"%b ", Qout_N753);
+$fwrite(fileout,"Qout_N754 = %b\n", Qout_N754);
+$fwrite(fileout1,"%b ", Qout_N754);
+$fwrite(fileout,"Qout_N755 = %b\n", Qout_N755);
+$fwrite(fileout1,"%b ", Qout_N755);
+$fwrite(fileout,"n1 = %b\n", n1);
+$fwrite(fileout1,"%b ", n1);
+$fwrite(fileout,"n2 = %b\n", n2);
+$fwrite(fileout1,"%b ", n2);
+$fwrite(fileout,"n3 = %b\n", n3);
+$fwrite(fileout1,"%b ", n3);
+$fwrite(fileout,"n4 = %b\n", n4);
+$fwrite(fileout1,"%b ", n4);
+$fwrite(fileout,"n5 = %b\n", n5);
+$fwrite(fileout1,"%b ", n5);
+$fwrite(fileout,"n6 = %b\n", n6);
+$fwrite(fileout1,"%b ", n6);
+$fwrite(fileout,"n7 = %b\n", n7);
+$fwrite(fileout1,"%b ", n7);
+$fwrite(fileout,"n8 = %b\n", n8);
+$fwrite(fileout1,"%b ", n8);
+$fwrite(fileout,"n9 = %b\n", n9);
+$fwrite(fileout1,"%b ", n9);
+$fwrite(fileout,"n10 = %b\n", n10);
+$fwrite(fileout1,"%b ", n10);
+$fwrite(fileout,"n11 = %b\n", n11);
+$fwrite(fileout1,"%b ", n11);
+$fwrite(fileout,"n12 = %b\n", n12);
+$fwrite(fileout1,"%b ", n12);
+$fwrite(fileout,"n13 = %b\n", n13);
+$fwrite(fileout1,"%b ", n13);
+$fwrite(fileout,"n14 = %b\n", n14);
+$fwrite(fileout1,"%b ", n14);
+$fwrite(fileout,"n15 = %b\n", n15);
+$fwrite(fileout1,"%b ", n15);
+$fwrite(fileout,"n16 = %b\n", n16);
+$fwrite(fileout1,"%b ", n16);
+$fwrite(fileout,"n17 = %b\n", n17);
+$fwrite(fileout1,"%b ", n17);
+$fwrite(fileout,"n18 = %b\n", n18);
+$fwrite(fileout1,"%b ", n18);
+$fwrite(fileout,"n19 = %b\n", n19);
+$fwrite(fileout1,"%b ", n19);
+$fwrite(fileout,"n20 = %b\n", n20);
+$fwrite(fileout1,"%b ", n20);
+$fwrite(fileout,"n21 = %b\n", n21);
+$fwrite(fileout1,"%b ", n21);
+$fwrite(fileout,"n22 = %b\n", n22);
+$fwrite(fileout1,"%b ", n22);
+$fwrite(fileout,"n23 = %b\n", n23);
+$fwrite(fileout1,"%b ", n23);
+$fwrite(fileout,"n24 = %b\n", n24);
+$fwrite(fileout1,"%b ", n24);
+$fwrite(fileout,"n25 = %b\n", n25);
+$fwrite(fileout1,"%b ", n25);
+$fwrite(fileout,"n26 = %b\n", n26);
+$fwrite(fileout1,"%b ", n26);
+$fwrite(fileout,"n27 = %b\n", n27);
+$fwrite(fileout1,"%b ", n27);
+$fwrite(fileout,"n28 = %b\n", n28);
+$fwrite(fileout1,"%b ", n28);
+$fwrite(fileout,"n29 = %b\n", n29);
+$fwrite(fileout1,"%b ", n29);
+$fwrite(fileout,"n30 = %b\n", n30);
+$fwrite(fileout1,"%b ", n30);
+$fwrite(fileout,"n31 = %b\n", n31);
+$fwrite(fileout1,"%b ", n31);
+$fwrite(fileout,"n32 = %b\n", n32);
+$fwrite(fileout1,"%b ", n32);
+$fwrite(fileout,"n33 = %b\n", n33);
+$fwrite(fileout1,"%b ", n33);
+$fwrite(fileout,"n34 = %b\n", n34);
+$fwrite(fileout1,"%b ", n34);
+$fwrite(fileout,"n35 = %b\n", n35);
+$fwrite(fileout1,"%b ", n35);
+$fwrite(fileout,"n36 = %b\n", n36);
+$fwrite(fileout1,"%b ", n36);
+$fwrite(fileout,"n37 = %b\n", n37);
+$fwrite(fileout1,"%b ", n37);
+$fwrite(fileout,"n38 = %b\n", n38);
+$fwrite(fileout1,"%b ", n38);
+$fwrite(fileout,"n39 = %b\n", n39);
+$fwrite(fileout1,"%b ", n39);
+$fwrite(fileout,"n40 = %b\n", n40);
+$fwrite(fileout1,"%b ", n40);
+$fwrite(fileout,"\n");
+$fwrite(fileout1,"\n");
+$fwrite(fileout,"%d CLOCK CYCLE ENDS   :SIGNAL VALUES AT THIS POINT \n\n",clk_count);
+$fwrite(fileout,"***********************************************************************************************************\n\n");
+end
+always @(posedge clk)
+begin
+clk_count=clk_count+1;
+$fwrite(fileout,"%d CLOCK CYCLE STARTS :SIGNAL VALUES AT THIS POINT \n\n",clk_count);
+$fwrite(fileout,"N1 = %b\n", N1);
+$fwrite(fileout1,"%b ", N1);
+$fwrite(fileout,"N5 = %b\n", N5);
+$fwrite(fileout1,"%b ", N5);
+$fwrite(fileout,"N9 = %b\n", N9);
+$fwrite(fileout1,"%b ", N9);
+$fwrite(fileout,"N13 = %b\n", N13);
+$fwrite(fileout1,"%b ", N13);
+$fwrite(fileout,"N17 = %b\n", N17);
+$fwrite(fileout1,"%b ", N17);
+$fwrite(fileout,"N21 = %b\n", N21);
+$fwrite(fileout1,"%b ", N21);
+$fwrite(fileout,"N25 = %b\n", N25);
+$fwrite(fileout1,"%b ", N25);
+$fwrite(fileout,"N29 = %b\n", N29);
+$fwrite(fileout1,"%b ", N29);
+$fwrite(fileout,"N33 = %b\n", N33);
+$fwrite(fileout1,"%b ", N33);
+$fwrite(fileout,"N37 = %b\n", N37);
+$fwrite(fileout1,"%b ", N37);
+$fwrite(fileout,"N41 = %b\n", N41);
+$fwrite(fileout1,"%b ", N41);
+$fwrite(fileout,"N45 = %b\n", N45);
+$fwrite(fileout1,"%b ", N45);
+$fwrite(fileout,"N49 = %b\n", N49);
+$fwrite(fileout1,"%b ", N49);
+$fwrite(fileout,"N53 = %b\n", N53);
+$fwrite(fileout1,"%b ", N53);
+$fwrite(fileout,"N57 = %b\n", N57);
+$fwrite(fileout1,"%b ", N57);
+$fwrite(fileout,"N61 = %b\n", N61);
+$fwrite(fileout1,"%b ", N61);
+$fwrite(fileout,"N65 = %b\n", N65);
+$fwrite(fileout1,"%b ", N65);
+$fwrite(fileout,"N69 = %b\n", N69);
+$fwrite(fileout1,"%b ", N69);
+$fwrite(fileout,"N73 = %b\n", N73);
+$fwrite(fileout1,"%b ", N73);
+$fwrite(fileout,"N77 = %b\n", N77);
+$fwrite(fileout1,"%b ", N77);
+$fwrite(fileout,"N81 = %b\n", N81);
+$fwrite(fileout1,"%b ", N81);
+$fwrite(fileout,"N85 = %b\n", N85);
+$fwrite(fileout1,"%b ", N85);
+$fwrite(fileout,"N89 = %b\n", N89);
+$fwrite(fileout1,"%b ", N89);
+$fwrite(fileout,"N93 = %b\n", N93);
+$fwrite(fileout1,"%b ", N93);
+$fwrite(fileout,"N97 = %b\n", N97);
+$fwrite(fileout1,"%b ", N97);
+$fwrite(fileout,"N101 = %b\n", N101);
+$fwrite(fileout1,"%b ", N101);
+$fwrite(fileout,"N105 = %b\n", N105);
+$fwrite(fileout1,"%b ", N105);
+$fwrite(fileout,"N109 = %b\n", N109);
+$fwrite(fileout1,"%b ", N109);
+$fwrite(fileout,"N113 = %b\n", N113);
+$fwrite(fileout1,"%b ", N113);
+$fwrite(fileout,"N117 = %b\n", N117);
+$fwrite(fileout1,"%b ", N117);
+$fwrite(fileout,"N121 = %b\n", N121);
+$fwrite(fileout1,"%b ", N121);
+$fwrite(fileout,"N125 = %b\n", N125);
+$fwrite(fileout1,"%b ", N125);
+$fwrite(fileout,"N129 = %b\n", N129);
+$fwrite(fileout1,"%b ", N129);
+$fwrite(fileout,"N130 = %b\n", N130);
+$fwrite(fileout1,"%b ", N130);
+$fwrite(fileout,"N131 = %b\n", N131);
+$fwrite(fileout1,"%b ", N131);
+$fwrite(fileout,"N132 = %b\n", N132);
+$fwrite(fileout1,"%b ", N132);
+$fwrite(fileout,"N133 = %b\n", N133);
+$fwrite(fileout1,"%b ", N133);
+$fwrite(fileout,"N134 = %b\n", N134);
+$fwrite(fileout1,"%b ", N134);
+$fwrite(fileout,"N135 = %b\n", N135);
+$fwrite(fileout1,"%b ", N135);
+$fwrite(fileout,"N136 = %b\n", N136);
+$fwrite(fileout1,"%b ", N136);
+$fwrite(fileout,"N137 = %b\n", N137);
+$fwrite(fileout1,"%b ", N137);
+end
+endmodule
+
