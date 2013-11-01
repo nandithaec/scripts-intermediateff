@@ -92,7 +92,7 @@ fin.close()
 
 fnew = open('synthesis/scripts/compile_dc.tcl', 'r') 
 newdata=fnew.readlines()
-print (newdata)
+#print (newdata)
 
 f1 = open('synthesis/scripts/compile_dc_backup.tcl', 'w') 
 #f1.writelines("This was the script compiled by the Design Compiler\n It gets overwritten in the pnr stepp. Hence saving a backup here\n\n")
@@ -110,7 +110,7 @@ if os.path.exists('synthesis/run/'):
 
 os.chdir('../../')
 print "...Pause...Done synthesis and optimisation of FF.. Starting pnr"
-time.sleep(5)
+#time.sleep(5)
 
 #Run place and route
 os.system('rtl2gds -rtl=%s -rtl_top=%s -pnr -frequency=%s -io_input_delay=%s -io_output_delay=%s ' %(filepath,options.module_name,clkfreq,io_input_delay,io_output_delay))	
