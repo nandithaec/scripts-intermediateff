@@ -283,7 +283,7 @@ for loop in range(start_loop, (num_of_loops+1)):
 
 	#python_results_compare.py will then need to be remotely executed
 	#Might need to execute these last 3 in a loop till the results are acceptable
-"""	
+	
 	print "Comparing the RTL and spice outputs\n"
 	os.system('python %s/python_compare_remote_seed.py -m %s -f %s -n %s -t %s -l %d' %(path,module,path,num_at_a_time,tech,loop))
 
@@ -310,7 +310,7 @@ print "Combining all rtl diff files\n"
 os.system('python  %s/python_count_flips_remote_seed.py -f %s  -n %s  --group %s -s %s' %(path,path,num,num_at_a_time,seed))  #To save the seed to results file
 
 
-"""
+
 
 
 
