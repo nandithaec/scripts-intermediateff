@@ -4,7 +4,7 @@
 #IMPORTANT: It is assumed that we are running parallel ngspice simulations on a remote 48-core cluster at 10.107.105.201. If this is not the case, you will need to modify this script to run it on this machine, by commenting out the scp and ssh commands.
 
 
-#Example usage: python /home/external/iitb/nanditha/simulations/c2670_alu/python_utility3_remote_seed_yuva.py -m c2670_clk -p /home/external/iitb/nanditha/simulations/c2670_alu -d c2670_alu -t 180 -n 10 --group 10 --clk 100 --std_lib osu018_stdcells_correct_vdd_gnd.sp
+#Example usage: python /home/external/iitb/nanditha/simulations/c499_PNN/python_utility3_remote_seed_yuva.py -m c499_clk_opFF -p /home/external/iitb/nanditha/simulations/FF_optimisation/c499_PNN -d c499_PNN -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp
 
 import optparse
 import re,os
@@ -134,7 +134,7 @@ frand.write("Seed:%d\n" %seed)
 random.seed(seed) #Seeding the random number generator
 
 
-clk_period = (1.0/float(clk))*(0.000001)
+clk_period = (1.0/float(clk))*(0.000001) #for the MHz
 
 print "\nclk is ",clk
 print "\nClk_period: ", clk_period
@@ -216,7 +216,8 @@ for loop in range(start_loop, (num_of_loops+1)):
 		
 		rand_gate= int(random.randrange(num_of_gates))  #A random gate picked
 		#print "Random gate is: ",rand_gate
-		rand_clk= int(random.randrange(num_of_clks))  #A random clk picked
+		#A random clk picked. dont pick the 1st 10 clock cycles. 1st 3 have dont care outputs at the FFs. ANd we are simulating 6 clk cycles, so, initialisation is 4 clk cycles. so, leave a guardband by ignoring the 1st 10 clk cycles
+		rand_clk= int(random.randrange(10,num_of_clks))  
 		#print "Random clock cycle is: ",rand_clk
 		#perl perl_calculate_drain.pl -s reference_spice.sp -l glitch_osu018_stdcells_correct_vdd_gnd.sp -r decoder_behav_pnr_reference_out/tool_reference_out.txt -m decoder_behav_pnr -f /home/user1/simulations/decoder -g 27
 
@@ -242,11 +243,12 @@ for loop in range(start_loop, (num_of_loops+1)):
 		if (initial_clk_part_abs < end_PWL) : 
 			initial_clk_part = end_PWL/clk_period
 
-		unif=random.uniform(0,arrival_clk_part*clk_period)
-		rand_glitch= (initial_clk_part*clk_period) +  unif  #A random glitch picked
-
-		#unif=random.uniform(0,0.1*clk_period) 
-		#rand_glitch= (1.4*clk_period) +  unif #arrival_clk + initial_clk should add up to 1.5
+		#unif=random.uniform(0,arrival_clk_part*clk_period)
+		#rand_glitch= (initial_clk_part*clk_period) +  unif  #A random glitch picked
+		
+		#glitch is being inserted at the 5th clk cycle
+		unif=random.uniform(0,0.85*clk_period) 
+		rand_glitch= (4.67*clk_period) +  unif #arrival_clk + initial_clk should add up to 4.5+0.15=4.65. 1 period-0.15=0.85
 
 		#unif=random.uniform(0,1.39*clk_period) 
 		#rand_glitch= (0*clk_period) +  unif #arrival_clk + initial_clk should add up to 1.5
