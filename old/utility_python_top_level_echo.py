@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-#Example usage: python utility_python_top_level_echo.py --rtl=/home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/c432_clk_opFF.v --mod=c432_clk_opFF --idelay 1.1 --odelay 1.1 --ipff iDFF --opff oDFF --test=/home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/test_c432.v --tb_mod=test_c432 --clk=250 --run=100us --design=c432_priority_opFF --tech=180 --num=10 --group 10 --path=/home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF  --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 16 --days 00 --hrs 00 --mins 10 --script python_utility3_yuva_echo_wt_6cycles.py
-
+#Example usage: python utility_python_top_level_echo.py --rtl=/home/users/nanditha/Documents/utility/c499_PNN/c499_clk_opFF.v --mod=c499_clk_opFF --idelay 1.1 --odelay 0.7 --ipff iDFF --opff oDFF --test=/home/users/nanditha/Documents/utility/c499_PNN/test_c499.v --tb_mod=test_c499 --clk=300 --run=100us --design=c499_PNN --tech=180 --num=10 --group 10 --path=/home/user1/simulations/c499_PNN  --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 16 --days 00 --hrs 00 --mins 30 --script python_utility3_remote_seed_yuva_echo.py
 
 #This script does a synthesis, place and route of the vhd/verilog file using rtl2gds. The pnr verilog file is modified to include fwrite statements to write the FF outputs to a reference file. This verilog file simulated using modelsim and the reference FF output values written to a text file.
 
@@ -77,7 +76,7 @@ mins=options.mins
 script=options.script
 
 #Example usage: python python1_read_RTL_syn_pnr.py -f decoder.vhd -m decoder_behav_pnr -clk 900
-os.system('python python1_read_RTL_syn_pnr_FFopt.py -f %s -m %s -c %s --idelay %s --odelay %s --ipff %s --opff %s' %(rtl,module,clkfreq,io_input_delay,io_output_delay,ip_FF,op_FF))
+os.system('python python1_read_RTL_syn_pnr.py -f %s -m %s -c %s --idelay %s --odelay %s --ipff %s --opff %s' %(rtl,module,clkfreq,io_input_delay,io_output_delay,ip_FF,op_FF))
 
 print('Done 1st script rtl+pnr\n')
 time.sleep(5)
@@ -111,11 +110,11 @@ time.sleep(5)
 ##Generate a template simulatable spice netlist from the dspf file generated after pnr. This would include all .ic, Voltage sources, meas, tran, control, param etc
 #NetlistFormat.pl
 #perl NetlstFrmt.pl -v decoder_behav_pnr_modelsim.v -s pnr/op_data/decoder_behav_pnr_final.dspf -l glitch_osu018_stdcells_correct_allcells.sp -c 1e9 -t 180 -m decoder_behav_pnr
-os.system('perl NetlstFrmt_echo_6cycles.pl -v %s_modelsim.v  -s %s.dspf -l glitch_%s -c %s -t %s -m %s' %(module,module,std_lib,clkfreq,techn, module))
+os.system('perl NetlstFrmt_echo.pl -v %s_modelsim.v  -s %s.dspf -l glitch_%s -c %s -t %s -m %s' %(module,module,std_lib,clkfreq,techn, module))
 print "***Done modifying the spice file to make it simulatable. File available in current directory reference_spice.sp\n"
 time.sleep(5)
 
-os.system('python python_create_jobscript.py -m %s -p %s -d %s -t %s -n %s --group %s --clk %s --std_lib %s  --proc_node %s --ppn %s --days %s --hrs %s --mins %s --script %s' %(module,path_folder,design_folder,techn,num,group,clkfreq,std_lib,nodes,ppn,days,hrs,mins,script))
+os.system('python python_create_jobscript.py -m %s -p /home/external/iitb/nanditha/simulations/%s -d %s -t %s -n %s --group %s --clk %s --std_lib %s  --proc_node %s --ppn %s --days %s --hrs %s --mins %s --script %s' %(module,design_folder,design_folder,techn,num,group,clkfreq,std_lib,nodes,ppn,days,hrs,mins,script))
 time.sleep(5)
 
 #Copy the entire Current directory to the machine where the simulations will be run in parallel. If running it on the 48-core cluster under the username: user1, password: user123 and copying to the folder /home/user1/simulations. Files will HAVE to be run from the remote machine,since the slave machines are connected only to the master and not to the outside world. So, these slave machines can ONLY be accessed by the master node.
@@ -136,6 +135,7 @@ print('Executing jobscript remotely on the pune cdac server machine\n')
 
 #os.system('ssh nanditha@yuva.cdac.in qsub /home/external/iitb/nanditha/simulations/%s/jobscript.txt' %(design_folder))
 """
+
 
 
 

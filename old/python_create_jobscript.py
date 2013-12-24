@@ -2,7 +2,7 @@
 
 #create a jobscript.txt file in the current directory. This entire dir will be copied to the Pune CDAC machine. The jobscript file will be used to submit the job to the queue
 
-##Example usage: python python_create_jobscript.py -m c432_clk_opFF -p /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF -d c432_priority_opFF -t 180 -n 10 --group 10 --clk 250 --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 16 --days 00 --hrs 00 --mins 10 --script python_utility3_remote_seed_yuva_echo.py
+##Example usage: python python_create_jobscript.py -m c499_clk_opFF -p /home/external/iitb/nanditha/simulations/c499_PNN -d c499_PNN -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 16 --days 00 --hrs 00 --mins 30 --script python_utility3_remote_seed_yuva_echo.py
 
 ##The pnr def.gz file is by default assumed to be in /pnr/op_data folder
 
@@ -17,7 +17,7 @@ parser = OptionParser('This script will create a jobscript.txt file in the curre
 
 parser.add_option("-m", "--mod",dest='module', help='Enter the entity name(vhdl) or module name (verilog)')
 parser.add_option("-n", "--num",dest='num',  help='Enter the number of spice decks to be generated and simulated')
-parser.add_option("-p", "--path", dest="path",help="Enter the ENTIRE path to your design folder (your working dir)- either this machine or remote machine. IF remote machine, enter the <entire_path>/<design_folder_name>")
+parser.add_option("-p", "--path", dest="path",help="Enter the ENTIRE path to your design folder (your working dir)- either this machine or remote machine. IF remote machine, enter ~/simulations/<design_folder_name>")
 parser.add_option("-d", "--design", dest="design_folder",help="Enter the name of your design folder")
 parser.add_option("-t", "--tech",dest='tech', help='Enter the technology node-for eg., For 180nm, enter 180')
 parser.add_option("--group",dest='group',  help='Enter the number of spice decks to be simulated at a time. For eg., if -n option is 10000, and say we want to run 100 at a time, then enter 100')
@@ -54,7 +54,7 @@ fw = open('jobscript.txt', 'w') ## This is the jobscript file that will be submi
 #Write the following commands to this file
 fw.write('###############################################################\n#!/bin/bash\n')
 fw.write('#PBS -l nodes=%s:ppn=%s\n' %(nodes,ppn))
-fw.write('#PBS -l walltime=%s:%s:%s:00 \n' %(days,hrs,mins))
+fw.write('#PBS -l walltime=%s:%s:%s \n' %(days,hrs,mins))
 fw.write('#PBS -q batch\n#PBS -m bae  \n')
 fw.write('## Comma separated list of email address and mobile numbers \n##PBS -M nanditha@ee.iitb.ac.in, 9769834234\n')
 
@@ -69,15 +69,16 @@ fw.write('NPROCS=`wc -l < $PBS_NODEFILE` \n')
 fw.write('echo NPROCS is $NPROCS \n')
 
 fw.write('cd $PBS_O_WORKDIR \n')
-fw.write('###PBS -e %s/error.txt\n###PBS -o %s/outfile.txt\n' %(path,path))
+fw.write('###PBS -e /home/external/iitb/nanditha/simulations/c499_yuva_new/error.txt\n###PBS -o /home/external/iitb/nanditha/simulations/c499_yuva_new/outfile.txt\n')
 
-fw.write('python %s/%s -m %s -p %s -d %s -t %s -n %s --group %s --clk %s --std_lib %s >/dev/null 2&>1\n' %(path,script,module,path,design_folder,tech,num,num_at_a_time,clk,std_lib))
+fw.write('python /home/external/iitb/nanditha/simulations/%s/%s -m %s -p /home/external/iitb/nanditha/simulations/%s -d %s -t %s -n %s --group %s --clk %s --std_lib %s >/dev/null 2&>1\n' %(design_folder,script,module,design_folder,design_folder,tech,num,num_at_a_time,clk,std_lib))
 
 fw.write('###############################################################\n')
 
 print "\n***********Generated the jobscript.txt file in the current working directory.***********\n"
 print "\n***********This script will, by default execute %s when copied to the Pune CDAC cluster through the job queue..***********\n" %script
 fw.close()
+
 
 
 

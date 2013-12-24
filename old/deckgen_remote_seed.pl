@@ -177,7 +177,7 @@ while(<SPC>)
     if($_=~m/Vvdd vdd 0 (.*)/i)
        {
         chomp($vdd=$1);
-       # print "Vdd for this technology is $vdd \n";
+       #s print "Vdd for this technology is $vdd \n";
        }
     if($_=~m/NUMBER OF OUTPUT PINS = (.*)/)
        {
@@ -199,7 +199,7 @@ $j=int($rand_gate);
 @temp=split(" ",$gates[$j]);
 $random_gate=$temp[$#temp];
 print "Random gate picked = $random_gate \n";
-#print "the random gate selected is gate number $j \n";
+print "the random gate selected is gate number $j \n";
 
 
 #selcting arandom glitched gate
@@ -243,7 +243,7 @@ $gates[$j]=~s/$random_gate/$random_gate\_$random_drain/;
 #Pick a random clk cycle to simulate
 #srand($seed);
 $cycle=int($rand_clk);
-#print "selected clock cycle : $cycle\n";
+print "selected clock cycle : $cycle\n";
 $count=0;
 #storing the input output values from reference output file for present clock cycle and next cycle
 #This file handle should be actually REF instead of SPC.
@@ -331,7 +331,7 @@ while(<SPC>)
 #||($_=~m/\.ic/)
         {
 	   ($temp1,$pinname)=split(" ",$_);
-           #print $pinname."\n";
+           print $pinname."\n";
            @temp=split(" ",$header);
            foreach $index( 0 .. $#temp)
               {
@@ -369,7 +369,7 @@ if(($_=~m/\.ic/))
            chomp($pinname);
            $pinname=~s/_reference_minus5.*//;
            $pinname=~s/\#\#//;
-          # print $pinname."\n";
+           print $pinname."\n";
           # print $pinname."\n";
            @temp=split(" ",$header);
            foreach $index( 0 .. $#temp)

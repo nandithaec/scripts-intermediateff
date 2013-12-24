@@ -2,7 +2,7 @@
 
 #Compare results of spice and RTL, creates difference files and validation files for each run
 
-#Example usage: python python_compare_remote_seed.py -m c432_clk_opFF -f /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF -n 1000 -t 180 -l 1
+#Example usage: python python_compare_remote_seed.py -m c499_clk_opFF -f /home/external/iitb/nanditha/simulations/c499_yuva_new -n 5 -t 180 -l 1
 
 import optparse
 import re,os

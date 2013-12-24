@@ -4,7 +4,7 @@
 #IMPORTANT: It is assumed that we are running parallel ngspice simulations on a remote 48-core cluster at 10.107.105.201. If this is not the case, you will need to modify this script to run it on this machine, by commenting out the scp and ssh commands.
 
 
-#Example usage: python /home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/python_utility3_remote_seed_echo.py -m c432_clk_opFF -p /home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF -d FF_optimisation/c432_priority_opFF -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp
+#Example usage: python /home/users/nanditha/Documents/utility/c499_PNN/python_utility3_remote_seed_echo.py -m c499_clk_opFF -p /home/users/nanditha/Documents/utility/c499_PNN -d c499_PNN -t 180 -n 10 --group 10 --clk 100 --std_lib osu018_stdcells_correct_vdd_gnd.sp
 
 import optparse
 import re,os
@@ -275,7 +275,7 @@ for loop in range(start_loop, (num_of_loops+1)):
 	#time.sleep(3)
 	
 	print "Running GNU Parallel and ngspice on the created decks\n"
-	"""
+	
 	os.system('python %s/python_GNUparallel_ngspice_remote_yuva_echo.py -n %s -d %s -o %s -p %s' %(path,num_at_a_time,design_folder,loop,path))
 
 	seed_new= int(random.randrange(100000)*random.random())  #Used by compare script to backup random decks
@@ -311,7 +311,8 @@ print "Combining all rtl diff files\n"
 os.system('python  %s/python_count_flips_remote_seed.py -f %s  -n %s  --group %s -s %s' %(path,path,num,num_at_a_time,seed))  #To save the seed to results file
 
 
-"""
+
+
 
 
 

@@ -1,10 +1,11 @@
 
 #!/usr/bin/env python
 
-#IMPORTANT: It is assumed that we are running parallel ngspice simulations on a remote 48-core cluster at 10.107.105.201. If this is not the case, you will need to modify this script to run it on this machine, by commenting out the scp and ssh commands.
+#IMPORTANT: It is assumed that we are running parallel ngspice simulations on a remote 48-core cluster at 10.107.105.201. If this is not the case, you will need to modify this script to run it on this machine, by commenting out the scp and ssh commands.w
 
+#This version of the script has the facility of selecting the gate based on the area of the gate. This version of the script uses another script python_weighted_gateselection.py to pick the random gate based on its area: Nov 17 2013
 
-#Example usage: python /home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/python_utility3_remote_seed_echo.py -m c432_clk_opFF -p /home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF -d FF_optimisation/c432_priority_opFF -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp
+#Example usage: python python_utility3_remote_seed_yuva_echo_noDFF.py -m c432_clk_opFF -p /home/nanditha/Documents/iitb/utility/c432_priority_opFF -d c432_priority_opFF -t 180 -n 2 --group 2 --clk 250 --std_lib osu018_stdcells_correct_vdd_gnd.sp
 
 import optparse
 import re,os
@@ -12,7 +13,7 @@ import glob,shutil,csv
 import random
 import subprocess, time
 import random,sys
-#import python_compare_remote
+from  python_weighted_gateselection_onlyDFF import weight_selection_onlyDFF
 
 from optparse import OptionParser
 
@@ -134,12 +135,12 @@ frand.write("Seed:%d\n" %seed)
 random.seed(seed) #Seeding the random number generator
 
 
-clk_period = (1.0/float(clk))*(0.000001)
+clk_period = (1.0/float(clk))*(0.000001) #for the MHz
 
 print "\nclk is ",clk
 print "\nClk_period: ", clk_period
 
-"""
+
 os.system('cat $PBS_NODEFILE > %s/nodes.txt' %path)
 print "PBS NODEFILE contents....written to nodes.txt\n"
 time.sleep(3)
@@ -148,7 +149,7 @@ os.system('python %s/python_ssh_addr_yuva.py -p %s' %(path,path))
 os.system('cat %s/sshmachines.txt' %path)
 print "Check contents of sshmachines.txt file....\n"
 time.sleep(10)
-"""
+
 
 #Uncomment this for future designs. For decoder example, decoder folder has already been created on desktop
 #os.system('ssh nanditha@10.107.90.52 mkdir /home/nanditha/simulations/%s' %(design_folder))
@@ -166,8 +167,8 @@ os.system('perl %s/perl_calculate_gates_clk.pl -s %s/reference_spice.sp -l %s/gl
 fg = open('%s/tmp_random.txt' %(path), 'r')
 gate_clk_data = [line.strip() for line in fg]
 
-num_of_gates=int(gate_clk_data[0])
-print "\nnum of gates is %d" %num_of_gates
+#num_of_gates=int(gate_clk_data[0])
+#print "\nnum of gates is %d" %num_of_gates
 
 num_of_clks=int(gate_clk_data[1])
 print "\nnum of clocks is %d" %num_of_clks
@@ -214,9 +215,14 @@ for loop in range(start_loop, (num_of_loops+1)):
 	print "***Inside repeat_deckgen. Executing deckgen to create decks and RTL.csv reference file\n***"
 	for loop_var in range(start, end+1): 
 		
-		rand_gate= int(random.randrange(num_of_gates))  #A random gate picked
+		#rand_gate= int(random.randrange(num_of_gates))  #A random gate picked
+
+		#This is called through a function written in python_weighted_gateselection.py
+		rand_gate=  weight_selection_onlyDFF(path);
+		print "Random subckt line=%d" %rand_gate
 		#print "Random gate is: ",rand_gate
-		rand_clk= int(random.randrange(num_of_clks))  #A random clk picked
+		#A random clk picked. dont pick the 1st 10 clock cycles. 1st 3 have dont care outputs at the FFs. ANd we are simulating 6 clk cycles, so, initialisation is 4 clk cycles. so, leave a guardband by ignoring the 1st 10 clk cycles
+		rand_clk= int(random.randrange(10,num_of_clks))  
 		#print "Random clock cycle is: ",rand_clk
 		#perl perl_calculate_drain.pl -s reference_spice.sp -l glitch_osu018_stdcells_correct_vdd_gnd.sp -r decoder_behav_pnr_reference_out/tool_reference_out.txt -m decoder_behav_pnr -f /home/user1/simulations/decoder -g 27
 
@@ -242,11 +248,12 @@ for loop in range(start_loop, (num_of_loops+1)):
 		if (initial_clk_part_abs < end_PWL) : 
 			initial_clk_part = end_PWL/clk_period
 
-		unif=random.uniform(0,arrival_clk_part*clk_period)
-		rand_glitch= (initial_clk_part*clk_period) +  unif  #A random glitch picked
-
-		#unif=random.uniform(0,0.1*clk_period) 
-		#rand_glitch= (1.4*clk_period) +  unif #arrival_clk + initial_clk should add up to 1.5
+		#unif=random.uniform(0,arrival_clk_part*clk_period)
+		#rand_glitch= (initial_clk_part*clk_period) +  unif  #A random glitch picked
+		
+		#glitch is being inserted at the 5th clk cycle
+		unif=random.uniform(0,0.85*clk_period) 
+		rand_glitch= (4.67*clk_period) +  unif #arrival_clk + initial_clk should add up to 4.5+0.15=4.65. 1 period-0.15=0.85
 
 		#unif=random.uniform(0,1.39*clk_period) 
 		#rand_glitch= (0*clk_period) +  unif #arrival_clk + initial_clk should add up to 1.5
@@ -273,9 +280,10 @@ for loop in range(start_loop, (num_of_loops+1)):
 	#print "\nssh to slave.. listing the files and pausing\n"
 	#os.system('ssh user1@192.168.1.8 pwd; cd /home/user1/simulations/decoder/spice_decks_%d; pwd;ls;pwd;ls | wc -l' %loop)
 	#time.sleep(3)
+
+
 	
 	print "Running GNU Parallel and ngspice on the created decks\n"
-	"""
 	os.system('python %s/python_GNUparallel_ngspice_remote_yuva_echo.py -n %s -d %s -o %s -p %s' %(path,num_at_a_time,design_folder,loop,path))
 
 	seed_new= int(random.randrange(100000)*random.random())  #Used by compare script to backup random decks
@@ -300,18 +308,26 @@ for loop in range(start_loop, (num_of_loops+1)):
 	if os.path.exists(spice_dir):
 		shutil.rmtree(spice_dir)
 
+
 ########################################End of loop########################################################
 #For validation of backup spice files
 
 shutil.copy('%s/glitch_%s' %(path,std_lib), '%s/backup_spice_decks' %path )
 shutil.copy('%s/tsmc018.m' %path, '%s/backup_spice_decks' %path )
 
-
 print "Combining all rtl diff files\n"
 os.system('python  %s/python_count_flips_remote_seed.py -f %s  -n %s  --group %s -s %s' %(path,path,num,num_at_a_time,seed))  #To save the seed to results file
 
 
-"""
-
+#Add the details of number of DFFs
+fa=open('/%s/subcktinstances.sp' %path, 'r')
+fb=open('/%s/spice_results/count_flips_summary.csv' %path, 'a+')
+read=fa.readlines()
+filelen=len(read)
+fb.writelines(read[filelen-3])
+fb.writelines(read[filelen-2])
+fb.writelines(read[filelen-1])
+fa.close()
+fb.close()
 
 
