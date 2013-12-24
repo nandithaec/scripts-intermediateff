@@ -1,7 +1,7 @@
 ###############################################################
 #!/bin/bash
-#PBS -l nodes=5:ppn=16
-#PBS -l walltime=07:15:00 
+#PBS -l nodes=1:ppn=10
+#PBS -l walltime=00:00:10:00 
 #PBS -q batch
 #PBS -m bae  
 ## Comma separated list of email address and mobile numbers 
@@ -16,7 +16,7 @@ echo PBS_QUEUE is $PBS_QUEUE
 NPROCS=`wc -l < $PBS_NODEFILE` 
 echo NPROCS is $NPROCS 
 cd $PBS_O_WORKDIR 
-###PBS -e /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF/error.txt
-###PBS -o /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF/outfile.txt
-python /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF/python_utility3_remote_seed_yuva_echo_wt_noDFF.py -m c432_clk_opFF -p /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF -d c432_priority_opFF -t 180 -n 11000 --group 1000 --clk 250 --std_lib osu018_stdcells_correct_vdd_gnd.sp >/dev/null 2&>1
+###PBS -e /home/external/iitb/nanditha/simulations/FF_optimisation/c2670_alu/error.txt
+###PBS -o /home/external/iitb/nanditha/simulations/FF_optimisation/c2670_alu/outfile.txt
+python /home/external/iitb/nanditha/simulations/FF_optimisation/c2670_alu/python_utility3_yuva_echo_wt_6cycles.py -m c2670_clk_opFF -p /home/external/iitb/nanditha/simulations/FF_optimisation/c2670_alu -d c2670_alu -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp >/dev/null 2&>1
 ###############################################################

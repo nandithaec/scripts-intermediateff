@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#Example usage: python utility_python_top_level_echo.py --rtl=/home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/c432_clk_opFF.v --mod=c432_clk_opFF --idelay 1.1 --odelay 1.1 --ipff iDFF --opff oDFF --test=/home/users/nanditha/Documents/utility/FF_optimisation/c432_priority_opFF/test_c432.v --tb_mod=test_c432 --clk=250 --run=100us --design=c432_priority_opFF --tech=180 --num=10 --group 10 --path=/home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF  --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 16 --days 00 --hrs 00 --mins 10 --script python_utility3_yuva_echo_wt_6cycles.py
+#Example usage: python utility_python_top_level_echo.py --rtl=/home/users/nanditha/Documents/utility/FF_optimisation/c2670_alu/c2670_clk_opFF.v --mod=c2670_clk_opFF --idelay 1.1 --odelay 1.1 --ipff iDFF --opff oDFF --test=/home/users/nanditha/Documents/utility/FF_optimisation/c2670_alu/test_c2670.v --tb_mod=test_c2670 --clk=300 --run=100us --design=c2670_alu --tech=180 --num=10 --group 10 --path=/home/external/iitb/nanditha/simulations/FF_optimisation/c2670_alu  --std_lib osu018_stdcells_correct_vdd_gnd.sp  --proc_node 1 --ppn 10 --days 00 --hrs 00 --mins 10 --script python_utility3_yuva_echo_wt_6cycles.py
 
 
 #This script does a synthesis, place and route of the vhd/verilog file using rtl2gds. The pnr verilog file is modified to include fwrite statements to write the FF outputs to a reference file. This verilog file simulated using modelsim and the reference FF output values written to a text file.
@@ -77,7 +77,7 @@ mins=options.mins
 script=options.script
 
 #Example usage: python python1_read_RTL_syn_pnr.py -f decoder.vhd -m decoder_behav_pnr -clk 900
-os.system('python python1_read_RTL_syn_pnr_FFopt.py -f %s -m %s -c %s --idelay %s --odelay %s --ipff %s --opff %s' %(rtl,module,clkfreq,io_input_delay,io_output_delay,ip_FF,op_FF))
+os.system('python python1_read_RTL_syn_pnr.py -f %s -m %s -c %s --idelay %s --odelay %s --ipff %s --opff %s' %(rtl,module,clkfreq,io_input_delay,io_output_delay,ip_FF,op_FF))
 
 print('Done 1st script rtl+pnr\n')
 time.sleep(5)
@@ -111,7 +111,7 @@ time.sleep(5)
 ##Generate a template simulatable spice netlist from the dspf file generated after pnr. This would include all .ic, Voltage sources, meas, tran, control, param etc
 #NetlistFormat.pl
 #perl NetlstFrmt.pl -v decoder_behav_pnr_modelsim.v -s pnr/op_data/decoder_behav_pnr_final.dspf -l glitch_osu018_stdcells_correct_allcells.sp -c 1e9 -t 180 -m decoder_behav_pnr
-os.system('perl NetlstFrmt_echo_6cycles.pl -v %s_modelsim.v  -s %s.dspf -l glitch_%s -c %s -t %s -m %s' %(module,module,std_lib,clkfreq,techn, module))
+os.system('perl NetlstFrmt_echo.pl -v %s_modelsim.v  -s %s.dspf -l glitch_%s -c %s -t %s -m %s' %(module,module,std_lib,clkfreq,techn, module))
 print "***Done modifying the spice file to make it simulatable. File available in current directory reference_spice.sp\n"
 time.sleep(5)
 

@@ -3,9 +3,8 @@
 
 #IMPORTANT: It is assumed that we are running parallel ngspice simulations on a remote 48-core cluster at 10.107.105.201. If this is not the case, you will need to modify this script to run it on this machine, by commenting out the scp and ssh commands.
 
-#This version of the script has the facility of selecting the gate based on the area of the gate. This version of the script uses another script python_weighted_gateselection.py to pick the random gate based on its area: Nov 17 2013
 
-#Example usage: python python_utility3_remote_seed_yuva_echo.py -m c432_clk_opFF -p /home/nanditha/Documents/iitb/utility/c432_priority_opFF -d c432_priority_opFF -t 180 -n 2 --group 2 --clk 250 --std_lib osu018_stdcells_correct_vdd_gnd.sp
+#Example usage: python /home/external/iitb/nanditha/simulations/c432_priority_opFF/python_utility3_remote_seed_yuva.py -m c432_clk_opFF -p /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF -d c432_priority_opFF -t 180 -n 10 --group 10 --clk 300 --std_lib osu018_stdcells_correct_vdd_gnd.sp
 
 import optparse
 import re,os
@@ -13,7 +12,7 @@ import glob,shutil,csv
 import random
 import subprocess, time
 import random,sys
-from  python_weighted_gateselection import weight_selection
+#import python_compare_remote
 
 from optparse import OptionParser
 
@@ -167,8 +166,8 @@ os.system('perl %s/perl_calculate_gates_clk.pl -s %s/reference_spice.sp -l %s/gl
 fg = open('%s/tmp_random.txt' %(path), 'r')
 gate_clk_data = [line.strip() for line in fg]
 
-#num_of_gates=int(gate_clk_data[0])
-#print "\nnum of gates is %d" %num_of_gates
+num_of_gates=int(gate_clk_data[0])
+print "\nnum of gates is %d" %num_of_gates
 
 num_of_clks=int(gate_clk_data[1])
 print "\nnum of clocks is %d" %num_of_clks
@@ -215,11 +214,7 @@ for loop in range(start_loop, (num_of_loops+1)):
 	print "***Inside repeat_deckgen. Executing deckgen to create decks and RTL.csv reference file\n***"
 	for loop_var in range(start, end+1): 
 		
-		#rand_gate= int(random.randrange(num_of_gates))  #A random gate picked
-
-		#This is called through a function written in python_weighted_gateselection.py
-		rand_gate=  weight_selection(path);
-		print "Random subckt line=%d" %rand_gate
+		rand_gate= int(random.randrange(num_of_gates))  #A random gate picked
 		#print "Random gate is: ",rand_gate
 		#A random clk picked. dont pick the 1st 10 clock cycles. 1st 3 have dont care outputs at the FFs. ANd we are simulating 6 clk cycles, so, initialisation is 4 clk cycles. so, leave a guardband by ignoring the 1st 10 clk cycles
 		rand_clk= int(random.randrange(10,num_of_clks))  
@@ -280,8 +275,6 @@ for loop in range(start_loop, (num_of_loops+1)):
 	#print "\nssh to slave.. listing the files and pausing\n"
 	#os.system('ssh user1@192.168.1.8 pwd; cd /home/user1/simulations/decoder/spice_decks_%d; pwd;ls;pwd;ls | wc -l' %loop)
 	#time.sleep(3)
-
-
 	
 	print "Running GNU Parallel and ngspice on the created decks\n"
 	os.system('python %s/python_GNUparallel_ngspice_remote_yuva_echo.py -n %s -d %s -o %s -p %s' %(path,num_at_a_time,design_folder,loop,path))
@@ -319,15 +312,8 @@ print "Combining all rtl diff files\n"
 os.system('python  %s/python_count_flips_remote_seed.py -f %s  -n %s  --group %s -s %s' %(path,path,num,num_at_a_time,seed))  #To save the seed to results file
 
 
-#Add the details of number of DFFs
-fa=open('/%s/subcktinstances.sp' %path, 'r')
-fb=open('/%s/spice_results/count_flips_summary.csv' %path, 'a+')
-read=fa.readlines()
-filelen=len(read)
-fb.writelines(read[filelen-3])
-fb.writelines(read[filelen-2])
-fb.writelines(read[filelen-1])
-fa.close()
-fb.close()
+
+
+
 
 

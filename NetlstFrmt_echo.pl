@@ -272,8 +272,8 @@ if(($_=~m/module $module \(/ .. /endmodule/)) #parsing the main module only
         ($junk,$ff_name)=split(" ",$_);
         push(@to_ff,$ff_name);
         $flag_flop=1;
-        print $_;
-        print "\n";
+      #  print $_;
+      #  print "\n";
      }
   
   }
@@ -567,13 +567,12 @@ $measure_at_falling_edge="";
 
 print "printing..\n";
 print "length=$#to_ff\n";
-foreach $i(0 .. $#to_ff)
- {
 
-
-print "$to_ff[$i]\n" ;
-print "v(X$module.$to_ff[$i]:Q)\n";
-}
+#foreach $i(0 .. $#to_ff)
+# {
+#print "$to_ff[$i]\n" ;
+#print "v(X$module.$to_ff[$i]:Q)\n";
+#}
 
 foreach $i(0 .. $#to_ff)
  {

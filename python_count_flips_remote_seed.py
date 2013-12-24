@@ -2,7 +2,7 @@
 
 #Compare results of spice and RTL
 
-#Example usage: python python_count_flips_remote_seed.py -f /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF  -n 5000 --group 1000 -s 68225526432718968352
+#Example usage: python python_count_flips_remote_seed.py -f /home/external/iitb/nanditha/simulations/FF_optimisation/c432_priority_opFF  -n 7000 --group 1000 -s 2555011154276248296
 
 import optparse
 import re,os
