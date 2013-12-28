@@ -86,11 +86,8 @@ fw1 = open('run_sim.bash', 'w') ## This is the commands input file for modelsim
 fw1.write('#!/bin/bash\n\n')
 #Remove work directory if it exists
 fw1.write('\\rm -rf ./work\n')
-#Run simulation, invoke modelsim without the GUI with -c option
-#fw1.write('vsim -c -do simulate_vsim.do >vsim.log\n')
-
-#Invoke ModelSim with GUI
-fw1.write('vsim  -do simulate_vsim.do\n')
+#Run simulation, invoke modelsim
+fw1.write('vsim -c -do simulate_vsim.do >vsim.log\n')
 
 fw.close()
 fw1.close()
@@ -98,10 +95,6 @@ print "\n********************INVOKING MODELSIM********************\n"
 
 #Run the bash script
 os.system('bash run_sim.bash')	
-
-#If running without GUI: log file is created
-#print "\n****Completed simulating the post layout verilog netlist.\n Reference FF outputs written\nCreated vsim.log..Check this file for log contents****"
-
-print "\n****Completed simulating the post layout verilog netlist.\n Reference FF outputs written****\n"
+print "\n****Completed simulating the post layout verilog netlist.\n Reference FF outputs written\nCreated vsim.log..Check this file for log contents****"
 
 

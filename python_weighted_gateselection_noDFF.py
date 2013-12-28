@@ -1,11 +1,12 @@
 
 #!/usr/bin/env python
 
+
 #Example usage: python python_weighted_gateselection_noDFF.py 
 #This script picks the random gate based on the gate area. The gate with the largest area has a higher probability of getting picked.
 #Nanditha Rao
 
-def weight_selection(path):
+def weight_selection_noDFF(path):
 	
 	import random
 	subckts=[]
@@ -142,8 +143,9 @@ def weight_selection(path):
 	print "**Final random gate picked=%s**" %original_gate		
 
 	fa.write ("\nNumber of gate instances is:%d" %len(gate_names))
-	fa.write ( "\nNumber of DFF instances is: %s" %dff)
+	fa.write ( "\nNumber of DFF instances in the original circuit is: %s" %dff)
 	fa.write ("\nPercentage of DFF instances is: %f" %(float(dff)/float(len(gate_names))*100.0))
+	fa.write ("\nNo DFF instances were picked during the experiment\n")
 
 	return subckt_index;
 
@@ -164,6 +166,7 @@ fb.writelines(read[filelen-1])
 fa.close()
 fb.close()
 """
+
 
 
 
